@@ -6,6 +6,9 @@ const purify = require("../dompurify");
 const util = require("util");
 const rimraf = util.promisify(require("rimraf"));
 const vfile = require("vfile");
+const process = require("../unified");
+const mime = require("mime");
+const toVfile = require("to-vfile");
 const options = {
   styleMap: [
     "p[style-name='Title'] => h1:fresh",
@@ -18,6 +21,26 @@ const options = {
 };
 
 module.exports = async function docx(filepath, extract, { sanitize = true }) {
+  const tempDirectory = path.join(os.tmpdir(), path.basename(filepath), "/");
+  await fs.promises.mkdir(tempDirectory, { recursive: true });
+  let counter = 0;
+  let images = [];
+  async function imageProcess(image) {
+    const buffer = await image.read();
+    const filename = `${++counter}.${mime.getExtension(image.contentType)}`;
+    await fs.promises.writeFile(path.join(tempDirectory, filename), buffer);
+    images = images.concat({
+      url: filename,
+      rel: [],
+      encodingFormat: image.contentType
+    });
+    return {
+      src: filename
+    };
+  }
+  options.convertImage = mammoth.images.imgElement(function(image) {
+    return imageProcess(image);
+  });
   const html = await mammoth.convertToHtml({ path: filepath }, options);
   const book = {
     name: path.basename(filepath, ".docx"),
@@ -27,7 +50,7 @@ module.exports = async function docx(filepath, extract, { sanitize = true }) {
         rel: ["alternate"],
         encodingFormat: "text/html"
       }
-    ],
+    ].concat(images),
     readingOrder: [
       {
         url: "index.html",
@@ -41,27 +64,43 @@ module.exports = async function docx(filepath, extract, { sanitize = true }) {
   // Use as reference when unzipping, deciding whether to sanitize or not.
 
   const clean = await purify(wrap(html.value, book.name), "index.html");
-  const tempDirectory = path.join(os.tmpdir(), path.basename(filepath), "/");
   await fs.promises.mkdir(tempDirectory, { recursive: true });
   await fs.promises.writeFile(path.join(tempDirectory, "index.html"), clean);
-  const htmlfile = vfile({
-    contents: clean,
-    path: "index.html",
-    messages: html.messages
-  });
-  urls["index.html"] = await extract(htmlfile, book.resources[0], {
-    contentType: "text/html"
-  });
+  for (const image of images) {
+    const file = await toVfile.read(path.join(tempDirectory, image.url));
+    urls[image.url] = await extract(file, image, {
+      contentType: image.encodingFormat
+    });
+    file.data.resource = image;
+  }
   const bookFile = vfile({
     contents: JSON.stringify(book),
     path: "index.json"
   });
-  urls["index.json"] = await extract(bookFile, book, {
-    contentType: "application/json"
+  urls["index.json"] = await extract(
+    bookFile,
+    Object.assign({ url: "index.json" }, book),
+    {
+      contentType: "application/json"
+    }
+  );
+  const htmlfile = vfile({
+    contents: clean,
+    path: path.join(tempDirectory, "index.html")
   });
-
+  urls["index.html"] = await extract(htmlfile, book.resources[0], {
+    contentType: "text/html"
+  });
+  htmlfile.data.book = book;
+  htmlfile.data.toc = false;
+  htmlfile.data.resource = {
+    url: "index.html",
+    rel: ["alternate"],
+    encodingFormat: "text/html"
+  };
+  const files = [htmlfile];
+  await process({ files, cwd: tempDirectory, output: tempDirectory }, extract);
   book.resources = book.resources.map(updateURL);
-  book.readingOrder = book.readingOrder.map(updateURL);
   await rimraf(tempDirectory);
   return book;
   function updateURL(resource) {

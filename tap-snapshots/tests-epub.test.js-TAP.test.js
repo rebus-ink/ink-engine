@@ -20,6 +20,100 @@ VFile {
 `;
 
 exports[
+  `tests/epub.test.js TAP epub process - sanitise false > epub unsanitised file OEBPS/aftermath.xhtml.json 1`
+] = `
+VFile {
+  "contents": "{\\n  \\"type\\": \\"root\\",\\n  \\"children\\": [\\n    {\\n      \\"type\\": \\"doctype\\",\\n      \\"name\\": \\"html\\",\\n      \\"public\\": \\"-//W3C//DTD XHTML 1.1//EN\\",\\n      \\"system\\": \\"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\\"\\n    },\\n    {\\n      \\"type\\": \\"element\\",\\n      \\"tagName\\": \\"html\\",\\n      \\"properties\\": {\\n        \\"xmlns\\": \\"http://www.w3.org/1999/xhtml\\"\\n      },\\n      \\"children\\": [\\n        {\\n          \\"type\\": \\"text\\",\\n          \\"value\\": \\"\\\\n\\"\\n        },\\n        {\\n          \\"type\\": \\"element\\",\\n          \\"tagName\\": \\"head\\",\\n          \\"properties\\": {},\\n          \\"children\\": [\\n            {\\n              \\"type\\": \\"text\\",\\n              \\"value\\": \\"\\\\n\\"\\n            },\\n            {\\n              \\"type\\": \\"element\\",\\n              \\"tagName\\": \\"title\\",\\n              \\"properties\\": {},\\n              \\"children\\": [\\n                {\\n                  \\"type\\": \\"text\\",\\n                  \\"value\\": \\"Test file\\\\n\\"\\n                }\\n              ]\\n            },\\n            {\\n              \\"type\\": \\"text\\",\\n              \\"value\\": \\"\\\\n\\"\\n            },\\n            {\\n              \\"type\\": \\"element\\",\\n              \\"tagName\\": \\"link\\",\\n              \\"properties\\": {\\n                \\"href\\": \\"css/style.css\\",\\n                \\"type\\": \\"text/css\\",\\n                \\"rel\\": [\\n                  \\"stylesheet\\"\\n                ]\\n              },\\n              \\"children\\": []\\n            },\\n            {\\n              \\"type\\": \\"text\\",\\n              \\"value\\": \\"\\\\n\\"\\n            }\\n          ]\\n        },\\n        {\\n          \\"type\\": \\"text\\",\\n          \\"value\\": \\"\\\\n\\"\\n        },\\n        {\\n          \\"type\\": \\"element\\",\\n          \\"tagName\\": \\"body\\",\\n          \\"properties\\": {\\n            \\"id\\": \\"ink-engine\\"\\n          },\\n          \\"children\\": [\\n            {\\n              \\"type\\": \\"element\\",\\n              \\"tagName\\": \\"ink-html\\",\\n              \\"properties\\": {},\\n              \\"children\\": [\\n                {\\n                  \\"type\\": \\"element\\",\\n                  \\"tagName\\": \\"ink-body\\",\\n                  \\"properties\\": {\\n                    \\"className\\": [\\n                      \\"highlight\\"\\n                    ]\\n                  },\\n                  \\"children\\": [\\n                    {\\n                      \\"type\\": \\"text\\",\\n                      \\"value\\": \\"\\\\n\\"\\n                    },\\n                    {\\n                      \\"type\\": \\"element\\",\\n                      \\"tagName\\": \\"div\\",\\n                      \\"properties\\": {\\n                        \\"className\\": [\\n                          \\"highlightbody\\"\\n                        ],\\n                        \\"dataInkLocation\\": 0\\n                      },\\n                      \\"children\\": [\\n                        {\\n                          \\"type\\": \\"text\\",\\n                          \\"value\\": \\"\\\\n\\"\\n                        },\\n                        {\\n                          \\"type\\": \\"element\\",\\n                          \\"tagName\\": \\"h1\\",\\n                          \\"properties\\": {\\n                            \\"id\\": \\"test-file\\",\\n                            \\"dataInkLocation\\": 1\\n                          },\\n                          \\"children\\": [\\n                            {\\n                              \\"type\\": \\"text\\",\\n                              \\"value\\": \\"Test file\\"\\n                            }\\n                          ]\\n                        },\\n                        {\\n                          \\"type\\": \\"text\\",\\n                          \\"value\\": \\"\\\\n\\\\n\\"\\n                        }\\n                      ]\\n                    },\\n                    {\\n                      \\"type\\": \\"text\\",\\n                      \\"value\\": \\"\\\\n\\\\n\\"\\n                    },\\n                    {\\n                      \\"type\\": \\"element\\",\\n                      \\"tagName\\": \\"p\\",\\n                      \\"properties\\": {\\n                        \\"dataInkLocation\\": 2\\n                      },\\n                      \\"children\\": [\\n                        {\\n                          \\"type\\": \\"element\\",\\n                          \\"tagName\\": \\"a\\",\\n                          \\"properties\\": {\\n                            \\"href\\": \\"http://kobo.com/\\"\\n                          },\\n                          \\"children\\": [\\n                            {\\n                              \\"type\\": \\"text\\",\\n                              \\"value\\": \\"This is test text\\"\\n                            }\\n                          ]\\n                        }\\n                      ]\\n                    },\\n                    {\\n                      \\"type\\": \\"text\\",\\n                      \\"value\\": \\"\\\\n\\\\n\\\\n\\"\\n                    }\\n                  ]\\n                }\\n              ]\\n            }\\n          ]\\n        },\\n        {\\n          \\"type\\": \\"text\\",\\n          \\"value\\": \\"\\\\n\\"\\n        }\\n      ]\\n    }\\n  ],\\n  \\"data\\": {\\n    \\"book\\": {\\n      \\"type\\": \\"Publication\\",\\n      \\"links\\": [],\\n      \\"resources\\": [\\n        {\\n          \\"url\\": \\"OEBPS/toc.ncx\\",\\n          \\"rel\\": [\\n            \\"ncx\\"\\n          ],\\n          \\"encodingFormat\\": \\"application/x-dtbncx+xml\\"\\n        },\\n        {\\n          \\"url\\": \\"OEBPS/css/style.css\\",\\n          \\"rel\\": [],\\n          \\"encodingFormat\\": \\"text/css\\"\\n        },\\n        {\\n          \\"url\\": \\"OEBPS/aftermath.xhtml\\",\\n          \\"rel\\": [],\\n          \\"encodingFormat\\": \\"application/xhtml+xml\\"\\n        },\\n        {\\n          \\"type\\": \\"LinkedResource\\",\\n          \\"rel\\": [\\n            \\"alternate\\",\\n            \\"describedby\\"\\n          ],\\n          \\"url\\": \\"OEBPS/content.opf\\",\\n          \\"encodingFormat\\": \\"application/oebps-package+xml\\"\\n        }\\n      ],\\n      \\"readingOrder\\": [\\n        {\\n          \\"url\\": \\"OEBPS/aftermath.xhtml\\",\\n          \\"rel\\": [],\\n          \\"encodingFormat\\": \\"application/xhtml+xml\\"\\n        }\\n      ],\\n      \\"json\\": {\\n        \\"epubVersion\\": \\"2.0\\"\\n      },\\n      \\"inLanguage\\": \\"en\\",\\n      \\"name\\": \\"Minimal Test File\\",\\n      \\"identifier\\": \\"urn:D35116F7-9AF8-4C13-B348-85E031B31080\\",\\n      \\"creator\\": [\\n        \\"Baldur Bjarnason\\"\\n      ],\\n      \\"publisher\\": [],\\n      \\"author\\": [],\\n      \\"translator\\": [],\\n      \\"illustrator\\": [],\\n      \\"editor\\": [],\\n      \\"colorist\\": [],\\n      \\"contributor\\": [\\n        \\"Baldur Bjarnason\\"\\n      ]\\n    },\\n    \\"resource\\": {\\n      \\"url\\": \\"OEBPS/aftermath.xhtml\\",\\n      \\"rel\\": [],\\n      \\"encodingFormat\\": \\"application/xhtml+xml\\"\\n    },\\n    \\"toc\\": {\\n      \\"type\\": \\"NCX\\",\\n      \\"url\\": \\"OEBPS/toc.ncx\\",\\n      \\"children\\": [\\n        {\\n          \\"label\\": \\"Test content\\",\\n          \\"url\\": \\"OEBPS/aftermath.xhtml\\",\\n          \\"children\\": []\\n        }\\n      ],\\n      \\"heading\\": \\"Test file\\",\\n      \\"inLanguage\\": \\"en\\"\\n    }\\n  }\\n}\\n",
+  "cwd": "/var/folders/9l/cqvwq4k12_v3gnfb066c589r0000gn/T/test-epub.epub/",
+  "data": Object {
+    "book": Object {
+      "author": Array [],
+      "colorist": Array [],
+      "contributor": Array [
+        "Baldur Bjarnason",
+      ],
+      "creator": Array [
+        "Baldur Bjarnason",
+      ],
+      "editor": Array [],
+      "identifier": "urn:D35116F7-9AF8-4C13-B348-85E031B31080",
+      "illustrator": Array [],
+      "inLanguage": "en",
+      "json": Object {
+        "epubVersion": "2.0",
+      },
+      "links": Array [],
+      "name": "Minimal Test File",
+      "publisher": Array [],
+      "readingOrder": Array [
+        Object {
+          "encodingFormat": "application/xhtml+xml",
+          "rel": Array [],
+          "url": "OEBPS/aftermath.xhtml",
+        },
+      ],
+      "resources": Array [
+        Object {
+          "encodingFormat": "application/x-dtbncx+xml",
+          "rel": Array [
+            "ncx",
+          ],
+          "url": "OEBPS/toc.ncx",
+        },
+        Object {
+          "encodingFormat": "text/css",
+          "rel": Array [],
+          "url": "OEBPS/css/style.css",
+        },
+        Object {
+          "encodingFormat": "application/xhtml+xml",
+          "rel": Array [],
+          "url": "OEBPS/aftermath.xhtml",
+        },
+        Object {
+          "encodingFormat": "application/oebps-package+xml",
+          "rel": Array [
+            "alternate",
+            "describedby",
+          ],
+          "type": "LinkedResource",
+          "url": "OEBPS/content.opf",
+        },
+      ],
+      "translator": Array [],
+      "type": "Publication",
+    },
+    "resource": Object {
+      "encodingFormat": "application/xhtml+xml",
+      "rel": Array [],
+      "url": "OEBPS/aftermath.xhtml",
+    },
+    "toc": Object {
+      "children": Array [
+        Object {
+          "children": Array [],
+          "label": "Test content",
+          "url": "OEBPS/aftermath.xhtml",
+        },
+      ],
+      "heading": "Test file",
+      "inLanguage": "en",
+      "type": "NCX",
+      "url": "OEBPS/toc.ncx",
+    },
+    "unifiedEngineGiven": true,
+  },
+  "history": Array [
+    "OEBPS/aftermath.xhtml",
+    "OEBPS/aftermath.json",
+    "aftermath.json",
+  ],
+  "messages": Array [],
+  "stored": true,
+}
+`;
+
+exports[
   `tests/epub.test.js TAP epub process - sanitise false > epub unsanitised file OEBPS/content.opf 1`
 ] = `
 VFile {
@@ -62,7 +156,7 @@ VFile {
 `;
 
 exports[
-  `tests/epub.test.js TAP epub process - sanitise false > epub unsanitised file undefined 1`
+  `tests/epub.test.js TAP epub process - sanitise false > epub unsanitised file index.json 1`
 ] = `
 VFile {
   "contents": "{\\"type\\":\\"Publication\\",\\"links\\":[],\\"resources\\":[{\\"url\\":\\"OEBPS/toc.ncx\\",\\"rel\\":[\\"ncx\\"],\\"encodingFormat\\":\\"application/x-dtbncx+xml\\"},{\\"url\\":\\"OEBPS/css/style.css\\",\\"rel\\":[],\\"encodingFormat\\":\\"text/css\\"},{\\"url\\":\\"OEBPS/aftermath.xhtml\\",\\"rel\\":[],\\"encodingFormat\\":\\"application/xhtml+xml\\"},{\\"type\\":\\"LinkedResource\\",\\"rel\\":[\\"alternate\\",\\"describedby\\"],\\"url\\":\\"OEBPS/content.opf\\",\\"encodingFormat\\":\\"application/oebps-package+xml\\"}],\\"readingOrder\\":[{\\"url\\":\\"OEBPS/aftermath.xhtml\\",\\"rel\\":[],\\"encodingFormat\\":\\"application/xhtml+xml\\"}],\\"json\\":{\\"epubVersion\\":\\"2.0\\"},\\"inLanguage\\":\\"en\\",\\"name\\":\\"Minimal Test File\\",\\"identifier\\":\\"urn:D35116F7-9AF8-4C13-B348-85E031B31080\\",\\"creator\\":[\\"Baldur Bjarnason\\"],\\"publisher\\":[],\\"author\\":[],\\"translator\\":[],\\"illustrator\\":[],\\"editor\\":[],\\"colorist\\":[],\\"contributor\\":[\\"Baldur Bjarnason\\"]}",
@@ -101,7 +195,7 @@ Object {
     Object {
       "encodingFormat": "application/xhtml+xml",
       "rel": Array [],
-      "url": undefined,
+      "url": "uploaded/OEBPS/aftermath.xhtml",
     },
   ],
   "resources": Array [
@@ -120,7 +214,7 @@ Object {
     Object {
       "encodingFormat": "application/xhtml+xml",
       "rel": Array [],
-      "url": undefined,
+      "url": "uploaded/OEBPS/aftermath.xhtml",
     },
     Object {
       "encodingFormat": "application/oebps-package+xml",
@@ -144,6 +238,16 @@ Object {
   "encodingFormat": "application/xhtml+xml",
   "rel": Array [],
   "url": "OEBPS/aftermath.xhtml",
+}
+`;
+
+exports[
+  `tests/epub.test.js TAP epub process - sanitise false > epub unsanitised resource OEBPS/aftermath.xhtml.json 1`
+] = `
+Object {
+  "encodingFormat": "application/json",
+  "rel": Array [],
+  "url": "OEBPS/aftermath.xhtml.json",
 }
 `;
 
@@ -184,7 +288,7 @@ Object {
 `;
 
 exports[
-  `tests/epub.test.js TAP epub process - sanitise false > epub unsanitised resource undefined 1`
+  `tests/epub.test.js TAP epub process - sanitise false > epub unsanitised resource index.json 1`
 ] = `
 Object {
   "author": Array [],
@@ -242,6 +346,7 @@ Object {
   ],
   "translator": Array [],
   "type": "Publication",
+  "url": "index.json",
 }
 `;
 
@@ -256,6 +361,100 @@ VFile {
     "/var/folders/9l/cqvwq4k12_v3gnfb066c589r0000gn/T/test-epub.epub/OEBPS/aftermath.xhtml",
   ],
   "messages": Array [],
+}
+`;
+
+exports[
+  `tests/epub.test.js TAP epub process > epub file OEBPS/aftermath.xhtml.json 1`
+] = `
+VFile {
+  "contents": "{\\n  \\"type\\": \\"root\\",\\n  \\"children\\": [\\n    {\\n      \\"type\\": \\"doctype\\",\\n      \\"name\\": \\"html\\",\\n      \\"public\\": \\"-//W3C//DTD XHTML 1.1//EN\\",\\n      \\"system\\": \\"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\\"\\n    },\\n    {\\n      \\"type\\": \\"element\\",\\n      \\"tagName\\": \\"html\\",\\n      \\"properties\\": {\\n        \\"xmlns\\": \\"http://www.w3.org/1999/xhtml\\"\\n      },\\n      \\"children\\": [\\n        {\\n          \\"type\\": \\"text\\",\\n          \\"value\\": \\"\\\\n\\"\\n        },\\n        {\\n          \\"type\\": \\"element\\",\\n          \\"tagName\\": \\"head\\",\\n          \\"properties\\": {},\\n          \\"children\\": [\\n            {\\n              \\"type\\": \\"text\\",\\n              \\"value\\": \\"\\\\n\\"\\n            },\\n            {\\n              \\"type\\": \\"element\\",\\n              \\"tagName\\": \\"title\\",\\n              \\"properties\\": {},\\n              \\"children\\": [\\n                {\\n                  \\"type\\": \\"text\\",\\n                  \\"value\\": \\"Test file\\\\n\\"\\n                }\\n              ]\\n            },\\n            {\\n              \\"type\\": \\"text\\",\\n              \\"value\\": \\"\\\\n\\"\\n            },\\n            {\\n              \\"type\\": \\"element\\",\\n              \\"tagName\\": \\"link\\",\\n              \\"properties\\": {\\n                \\"rel\\": [\\n                  \\"stylesheet\\"\\n                ],\\n                \\"type\\": \\"text/css\\",\\n                \\"href\\": \\"css/style.css\\"\\n              },\\n              \\"children\\": []\\n            },\\n            {\\n              \\"type\\": \\"text\\",\\n              \\"value\\": \\"\\\\n\\"\\n            }\\n          ]\\n        },\\n        {\\n          \\"type\\": \\"text\\",\\n          \\"value\\": \\"\\\\n\\"\\n        },\\n        {\\n          \\"type\\": \\"element\\",\\n          \\"tagName\\": \\"body\\",\\n          \\"properties\\": {\\n            \\"id\\": \\"ink-engine\\"\\n          },\\n          \\"children\\": [\\n            {\\n              \\"type\\": \\"element\\",\\n              \\"tagName\\": \\"ink-html\\",\\n              \\"properties\\": {},\\n              \\"children\\": [\\n                {\\n                  \\"type\\": \\"element\\",\\n                  \\"tagName\\": \\"ink-body\\",\\n                  \\"properties\\": {\\n                    \\"className\\": [\\n                      \\"highlight\\"\\n                    ]\\n                  },\\n                  \\"children\\": [\\n                    {\\n                      \\"type\\": \\"text\\",\\n                      \\"value\\": \\"\\\\n\\"\\n                    },\\n                    {\\n                      \\"type\\": \\"element\\",\\n                      \\"tagName\\": \\"div\\",\\n                      \\"properties\\": {\\n                        \\"className\\": [\\n                          \\"highlightbody\\"\\n                        ],\\n                        \\"dataInkLocation\\": 0\\n                      },\\n                      \\"children\\": [\\n                        {\\n                          \\"type\\": \\"text\\",\\n                          \\"value\\": \\"\\\\n\\"\\n                        },\\n                        {\\n                          \\"type\\": \\"element\\",\\n                          \\"tagName\\": \\"h1\\",\\n                          \\"properties\\": {\\n                            \\"id\\": \\"test-file\\",\\n                            \\"dataInkLocation\\": 1\\n                          },\\n                          \\"children\\": [\\n                            {\\n                              \\"type\\": \\"text\\",\\n                              \\"value\\": \\"Test file\\"\\n                            }\\n                          ]\\n                        },\\n                        {\\n                          \\"type\\": \\"text\\",\\n                          \\"value\\": \\"\\\\n\\\\n\\"\\n                        }\\n                      ]\\n                    },\\n                    {\\n                      \\"type\\": \\"text\\",\\n                      \\"value\\": \\"\\\\n\\\\n\\"\\n                    },\\n                    {\\n                      \\"type\\": \\"element\\",\\n                      \\"tagName\\": \\"p\\",\\n                      \\"properties\\": {\\n                        \\"dataInkLocation\\": 2\\n                      },\\n                      \\"children\\": [\\n                        {\\n                          \\"type\\": \\"element\\",\\n                          \\"tagName\\": \\"a\\",\\n                          \\"properties\\": {\\n                            \\"href\\": \\"http://kobo.com/\\"\\n                          },\\n                          \\"children\\": [\\n                            {\\n                              \\"type\\": \\"text\\",\\n                              \\"value\\": \\"This is test text\\"\\n                            }\\n                          ]\\n                        }\\n                      ]\\n                    },\\n                    {\\n                      \\"type\\": \\"text\\",\\n                      \\"value\\": \\"\\\\n\\\\n\\\\n\\"\\n                    }\\n                  ]\\n                }\\n              ]\\n            }\\n          ]\\n        },\\n        {\\n          \\"type\\": \\"text\\",\\n          \\"value\\": \\"\\\\n\\"\\n        }\\n      ]\\n    }\\n  ],\\n  \\"data\\": {\\n    \\"book\\": {\\n      \\"type\\": \\"Publication\\",\\n      \\"links\\": [],\\n      \\"resources\\": [\\n        {\\n          \\"url\\": \\"OEBPS/toc.ncx\\",\\n          \\"rel\\": [\\n            \\"ncx\\"\\n          ],\\n          \\"encodingFormat\\": \\"application/x-dtbncx+xml\\"\\n        },\\n        {\\n          \\"url\\": \\"OEBPS/css/style.css\\",\\n          \\"rel\\": [],\\n          \\"encodingFormat\\": \\"text/css\\"\\n        },\\n        {\\n          \\"url\\": \\"OEBPS/aftermath.xhtml\\",\\n          \\"rel\\": [],\\n          \\"encodingFormat\\": \\"application/xhtml+xml\\"\\n        },\\n        {\\n          \\"type\\": \\"LinkedResource\\",\\n          \\"rel\\": [\\n            \\"alternate\\",\\n            \\"describedby\\"\\n          ],\\n          \\"url\\": \\"OEBPS/content.opf\\",\\n          \\"encodingFormat\\": \\"application/oebps-package+xml\\"\\n        }\\n      ],\\n      \\"readingOrder\\": [\\n        {\\n          \\"url\\": \\"OEBPS/aftermath.xhtml\\",\\n          \\"rel\\": [],\\n          \\"encodingFormat\\": \\"application/xhtml+xml\\"\\n        }\\n      ],\\n      \\"json\\": {\\n        \\"epubVersion\\": \\"2.0\\"\\n      },\\n      \\"inLanguage\\": \\"en\\",\\n      \\"name\\": \\"Minimal Test File\\",\\n      \\"identifier\\": \\"urn:D35116F7-9AF8-4C13-B348-85E031B31080\\",\\n      \\"creator\\": [\\n        \\"Baldur Bjarnason\\"\\n      ],\\n      \\"publisher\\": [],\\n      \\"author\\": [],\\n      \\"translator\\": [],\\n      \\"illustrator\\": [],\\n      \\"editor\\": [],\\n      \\"colorist\\": [],\\n      \\"contributor\\": [\\n        \\"Baldur Bjarnason\\"\\n      ]\\n    },\\n    \\"resource\\": {\\n      \\"url\\": \\"OEBPS/aftermath.xhtml\\",\\n      \\"rel\\": [],\\n      \\"encodingFormat\\": \\"application/xhtml+xml\\"\\n    },\\n    \\"toc\\": {\\n      \\"type\\": \\"NCX\\",\\n      \\"url\\": \\"OEBPS/toc.ncx\\",\\n      \\"children\\": [\\n        {\\n          \\"label\\": \\"Test content\\",\\n          \\"url\\": \\"OEBPS/aftermath.xhtml\\",\\n          \\"children\\": []\\n        }\\n      ],\\n      \\"heading\\": \\"Test file\\",\\n      \\"inLanguage\\": \\"en\\"\\n    }\\n  }\\n}\\n",
+  "cwd": "/var/folders/9l/cqvwq4k12_v3gnfb066c589r0000gn/T/test-epub.epub/",
+  "data": Object {
+    "book": Object {
+      "author": Array [],
+      "colorist": Array [],
+      "contributor": Array [
+        "Baldur Bjarnason",
+      ],
+      "creator": Array [
+        "Baldur Bjarnason",
+      ],
+      "editor": Array [],
+      "identifier": "urn:D35116F7-9AF8-4C13-B348-85E031B31080",
+      "illustrator": Array [],
+      "inLanguage": "en",
+      "json": Object {
+        "epubVersion": "2.0",
+      },
+      "links": Array [],
+      "name": "Minimal Test File",
+      "publisher": Array [],
+      "readingOrder": Array [
+        Object {
+          "encodingFormat": "application/xhtml+xml",
+          "rel": Array [],
+          "url": "OEBPS/aftermath.xhtml",
+        },
+      ],
+      "resources": Array [
+        Object {
+          "encodingFormat": "application/x-dtbncx+xml",
+          "rel": Array [
+            "ncx",
+          ],
+          "url": "OEBPS/toc.ncx",
+        },
+        Object {
+          "encodingFormat": "text/css",
+          "rel": Array [],
+          "url": "OEBPS/css/style.css",
+        },
+        Object {
+          "encodingFormat": "application/xhtml+xml",
+          "rel": Array [],
+          "url": "OEBPS/aftermath.xhtml",
+        },
+        Object {
+          "encodingFormat": "application/oebps-package+xml",
+          "rel": Array [
+            "alternate",
+            "describedby",
+          ],
+          "type": "LinkedResource",
+          "url": "OEBPS/content.opf",
+        },
+      ],
+      "translator": Array [],
+      "type": "Publication",
+    },
+    "resource": Object {
+      "encodingFormat": "application/xhtml+xml",
+      "rel": Array [],
+      "url": "OEBPS/aftermath.xhtml",
+    },
+    "toc": Object {
+      "children": Array [
+        Object {
+          "children": Array [],
+          "label": "Test content",
+          "url": "OEBPS/aftermath.xhtml",
+        },
+      ],
+      "heading": "Test file",
+      "inLanguage": "en",
+      "type": "NCX",
+      "url": "OEBPS/toc.ncx",
+    },
+    "unifiedEngineGiven": true,
+  },
+  "history": Array [
+    "OEBPS/aftermath.xhtml",
+    "OEBPS/aftermath.json",
+    "aftermath.json",
+  ],
+  "messages": Array [],
+  "stored": true,
 }
 `;
 
@@ -299,7 +498,7 @@ VFile {
 }
 `;
 
-exports[`tests/epub.test.js TAP epub process > epub file undefined 1`] = `
+exports[`tests/epub.test.js TAP epub process > epub file index.json 1`] = `
 VFile {
   "contents": "{\\"type\\":\\"Publication\\",\\"links\\":[],\\"resources\\":[{\\"url\\":\\"OEBPS/toc.ncx\\",\\"rel\\":[\\"ncx\\"],\\"encodingFormat\\":\\"application/x-dtbncx+xml\\"},{\\"url\\":\\"OEBPS/css/style.css\\",\\"rel\\":[],\\"encodingFormat\\":\\"text/css\\"},{\\"url\\":\\"OEBPS/aftermath.xhtml\\",\\"rel\\":[],\\"encodingFormat\\":\\"application/xhtml+xml\\"},{\\"type\\":\\"LinkedResource\\",\\"rel\\":[\\"alternate\\",\\"describedby\\"],\\"url\\":\\"OEBPS/content.opf\\",\\"encodingFormat\\":\\"application/oebps-package+xml\\"}],\\"readingOrder\\":[{\\"url\\":\\"OEBPS/aftermath.xhtml\\",\\"rel\\":[],\\"encodingFormat\\":\\"application/xhtml+xml\\"}],\\"json\\":{\\"epubVersion\\":\\"2.0\\"},\\"inLanguage\\":\\"en\\",\\"name\\":\\"Minimal Test File\\",\\"identifier\\":\\"urn:D35116F7-9AF8-4C13-B348-85E031B31080\\",\\"creator\\":[\\"Baldur Bjarnason\\"],\\"publisher\\":[],\\"author\\":[],\\"translator\\":[],\\"illustrator\\":[],\\"editor\\":[],\\"colorist\\":[],\\"contributor\\":[\\"Baldur Bjarnason\\"]}",
   "cwd": "/Users/baldurbjarnason/Projects/ink-engine",
@@ -335,7 +534,7 @@ Object {
     Object {
       "encodingFormat": "application/xhtml+xml",
       "rel": Array [],
-      "url": undefined,
+      "url": "uploaded/OEBPS/aftermath.xhtml",
     },
   ],
   "resources": Array [
@@ -354,7 +553,7 @@ Object {
     Object {
       "encodingFormat": "application/xhtml+xml",
       "rel": Array [],
-      "url": undefined,
+      "url": "uploaded/OEBPS/aftermath.xhtml",
     },
     Object {
       "encodingFormat": "application/oebps-package+xml",
@@ -378,6 +577,16 @@ Object {
   "encodingFormat": "application/xhtml+xml",
   "rel": Array [],
   "url": "OEBPS/aftermath.xhtml",
+}
+`;
+
+exports[
+  `tests/epub.test.js TAP epub process > epub resource OEBPS/aftermath.xhtml.json 1`
+] = `
+Object {
+  "encodingFormat": "application/json",
+  "rel": Array [],
+  "url": "OEBPS/aftermath.xhtml.json",
 }
 `;
 
@@ -417,7 +626,7 @@ Object {
 }
 `;
 
-exports[`tests/epub.test.js TAP epub process > epub resource undefined 1`] = `
+exports[`tests/epub.test.js TAP epub process > epub resource index.json 1`] = `
 Object {
   "author": Array [],
   "colorist": Array [],
@@ -474,5 +683,6 @@ Object {
   ],
   "translator": Array [],
   "type": "Publication",
+  "url": "index.json",
 }
 `;

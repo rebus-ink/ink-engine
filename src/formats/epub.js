@@ -10,6 +10,7 @@ const processCSS = require("../postcss");
 const parseToC = require("./epub-nav");
 const toVfile = require("to-vfile");
 const vfile = require("vfile");
+const process = require("../unified");
 
 const JSTYPES = [
   "text/javascript",
@@ -79,9 +80,14 @@ async function epub(file, extract, { sanitize = true }) {
     contents: JSON.stringify(book),
     path: "index.json"
   });
-  urls["index.json"] = await extract(bookFile, book, {
-    contentType: "application/json"
-  });
+  urls["index.json"] = await extract(
+    bookFile,
+    Object.assign({ url: "index.json" }, book),
+    {
+      contentType: "application/json"
+    }
+  );
+  let files = [];
 
   const tempDirectory = path.join(os.tmpdir(), path.basename(file), "/");
   const extractor = unzip.Extract({ path: tempDirectory });
@@ -112,6 +118,8 @@ async function epub(file, extract, { sanitize = true }) {
         urls[resource.url] = await extract(cleanedFile, resource, {
           contentType: resource.encodingFormat
         });
+        cleanedFile.data.resource = resource;
+        files = files.concat(cleanedFile);
       } else if (resource.encodingFormat.includes("css")) {
         const file = await fs.promises.readFile(
           path.join(tempDirectory, resource.url),
@@ -125,24 +133,44 @@ async function epub(file, extract, { sanitize = true }) {
         urls[resource.url] = await extract(cleanedFile, resource, {
           contentType: resource.encodingFormat
         });
+        cleanedFile.data.resource = resource;
+        files = files.concat(cleanedFile);
       } else if (!JSTYPES.includes(resource.encodingFormat)) {
         const file = await toVfile.read(path.join(tempDirectory, resource.url));
         urls[resource.url] = await extract(file, resource, {
           contentType: resource.encodingFormat
         });
+        file.data.resource = resource;
+        files = files.concat(file);
       }
     }
   } else {
     for (const resource of book.resources) {
+      if (resource.rel.includes("contents") || resource.rel.includes("ncx")) {
+        const file = await fs.promises.readFile(
+          path.join(tempDirectory, resource.url),
+          "utf8"
+        );
+        toc = parseToC(file, resource.url);
+      }
       const file = await toVfile.read(path.join(tempDirectory, resource.url));
       urls[resource.url] = await extract(file, resource, {
         contentType: resource.encodingFormat
       });
+      file.data.resource = resource;
+      files = files.concat(file);
     }
   }
+  files = files
+    .map(file => {
+      file.data.book = book;
+      file.data.toc = toc;
+      return file;
+    })
+    .filter(file => file.data.resource.encodingFormat.includes("html"));
+  // call processor and extract generated json
+  await process({ files, cwd: tempDirectory, output: tempDirectory }, extract);
   book.resources = book.resources.map(updateURL);
-  book.readingOrder = book.readingOrder.map(updateURL);
-  console.log(toc);
   await rimraf(tempDirectory);
   return book;
   function updateURL(resource) {
