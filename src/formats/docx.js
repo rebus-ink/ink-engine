@@ -99,8 +99,12 @@ module.exports = async function docx(filepath, extract, { sanitize = true }) {
     encodingFormat: "text/html"
   };
   const files = [htmlfile];
-  await process({ files, cwd: tempDirectory, output: tempDirectory }, extract);
+  const { wordcount } = await process(
+    { files, cwd: tempDirectory, output: tempDirectory },
+    extract
+  );
   book.resources = book.resources.map(updateURL);
+  book.wordCount = wordcount;
   await rimraf(tempDirectory);
   return book;
   function updateURL(resource) {

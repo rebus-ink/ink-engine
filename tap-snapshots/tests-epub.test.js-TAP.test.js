@@ -82,6 +82,7 @@ VFile {
       ],
       "translator": Array [],
       "type": "Publication",
+      "wordCount": 6,
     },
     "resource": Object {
       "encodingFormat": "application/xhtml+xml",
@@ -102,6 +103,7 @@ VFile {
       "url": "OEBPS/toc.ncx",
     },
     "unifiedEngineGiven": true,
+    "wordcount": 6,
   },
   "history": Array [
     "OEBPS/aftermath.xhtml",
@@ -228,6 +230,7 @@ Object {
   ],
   "translator": Array [],
   "type": "Publication",
+  "wordCount": 6,
 }
 `;
 
@@ -427,6 +430,7 @@ VFile {
       ],
       "translator": Array [],
       "type": "Publication",
+      "wordCount": 6,
     },
     "resource": Object {
       "encodingFormat": "application/xhtml+xml",
@@ -447,6 +451,7 @@ VFile {
       "url": "OEBPS/toc.ncx",
     },
     "unifiedEngineGiven": true,
+    "wordcount": 6,
   },
   "history": Array [
     "OEBPS/aftermath.xhtml",
@@ -567,6 +572,7 @@ Object {
   ],
   "translator": Array [],
   "type": "Publication",
+  "wordCount": 6,
 }
 `;
 

@@ -57,6 +57,7 @@ VFile {
           "url": "1.png",
         },
       ],
+      "wordCount": 581,
     },
     "resource": Object {
       "encodingFormat": "text/html",
@@ -67,6 +68,7 @@ VFile {
     },
     "toc": false,
     "unifiedEngineGiven": true,
+    "wordcount": 581,
   },
   "history": Array [
     "index.html",
@@ -113,6 +115,7 @@ Object {
       "url": "uploaded/1.png",
     },
   ],
+  "wordCount": 581,
 }
 `;
 
