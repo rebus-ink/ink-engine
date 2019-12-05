@@ -33,7 +33,7 @@ module.exports = function processEngine({ files, output, cwd }, extract) {
         treeOut: true
       },
       function(err, code, context) {
-        if (err) reject(err);
+        if (err || code === 1) return reject(new Error("Processing failed"));
         return processFiles(files, extract).then(wordcount => {
           context.wordcount = wordcount;
           return resolve(context);
@@ -47,7 +47,7 @@ module.exports = function processEngine({ files, output, cwd }, extract) {
 async function processFiles(files, extract) {
   let count = 0;
   for (const file of files) {
-    count = count + (file.data.wordcount || 0);
+    count = count + file.data.wordcount;
   }
   for (const file of files) {
     const resource = Object.assign({}, file.data.resource, {

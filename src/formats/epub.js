@@ -11,6 +11,9 @@ const parseToC = require("./epub-nav");
 const toVfile = require("to-vfile");
 const vfile = require("vfile");
 const process = require("../unified");
+const crypto = require("crypto");
+const stream = require("stream");
+const pipeline = util.promisify(stream.pipeline);
 
 const JSTYPES = [
   "text/javascript",
@@ -44,10 +47,15 @@ async function epub(file, extract, { sanitize = true }) {
    */
   const urls = {};
   let container;
-  await fs
-    .createReadStream(file)
-    .pipe(unzip.Parse())
-    .on("entry", async entry => {
+  // let errorInStream
+  // function errorHandler (err) {
+  //   console.log('error in stream')
+  //   errorInStream = err
+  // }
+
+  await pipeline(
+    fs.createReadStream(file),
+    unzip.Parse().on("entry", async entry => {
       if (entry.path === "META-INF/container.xml") {
         const content = await entry.buffer();
         container = content.toString();
@@ -55,16 +63,15 @@ async function epub(file, extract, { sanitize = true }) {
         entry.autodrain();
       }
     })
-    .promise();
+  );
   // find OPF file from container
   const opfPath = container.match(/full-path="([^"]+)"/)[1];
   // Read OPF file from zip
   let book;
   let toc;
-  await fs
-    .createReadStream(file)
-    .pipe(unzip.Parse())
-    .on("entry", async entry => {
+  await pipeline(
+    fs.createReadStream(file),
+    unzip.Parse().on("entry", async entry => {
       if (entry.path === opfPath) {
         const content = await entry.buffer();
         book = parseOPF(content.toString(), opfPath);
@@ -72,7 +79,7 @@ async function epub(file, extract, { sanitize = true }) {
         entry.autodrain();
       }
     })
-    .promise();
+  );
   // convert to publication
   // Use as reference when unzipping, deciding whether to sanitize or not.
 
@@ -88,8 +95,14 @@ async function epub(file, extract, { sanitize = true }) {
     }
   );
   let files = [];
-
-  const tempDirectory = path.join(os.tmpdir(), path.basename(file), "/");
+  const randomFileName = crypto.randomBytes(15).toString("hex");
+  const tempDirectory = path.join(
+    os.tmpdir(),
+    randomFileName,
+    path.basename(file),
+    "/"
+  );
+  // await fs.promises.mkdir(tempDirectory, { recursive: true });
   const extractor = unzip.Extract({ path: tempDirectory });
   fs.createReadStream(file).pipe(extractor);
   await extractor.promise();

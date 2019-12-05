@@ -3,6 +3,13 @@ const process = require("../");
 const formats = require("../src/formats");
 // const fs = require("fs");
 const path = require("path");
+const os = require("os");
+
+tap.cleanSnapshot = s => {
+  const tempdir = os.tmpdir();
+  const reg = new RegExp(`"${tempdir}[^"]+"`, "g");
+  return s.replace(reg, '"TMPDIR"');
+};
 
 const epubPath = path.join(__dirname, "fixtures/test-epub.epub");
 
@@ -14,7 +21,10 @@ tap.test("epub process", async test => {
     test.matchSnapshot(resource, "epub resource " + resource.url);
     return Promise.resolve("uploaded/" + resource.url);
   }
-  const result = await process(epubPath, extract);
+  const result = await process(
+    path.join(__dirname, "fixtures/test-epub-js.epub"),
+    extract
+  );
   test.matchSnapshot(result, "epub first result");
 });
 

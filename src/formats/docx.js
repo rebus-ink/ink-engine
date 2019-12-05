@@ -9,6 +9,7 @@ const vfile = require("vfile");
 const process = require("../unified");
 const mime = require("mime");
 const toVfile = require("to-vfile");
+const crypto = require("crypto");
 const options = {
   styleMap: [
     "p[style-name='Title'] => h1:fresh",
@@ -21,7 +22,13 @@ const options = {
 };
 
 module.exports = async function docx(filepath, extract, { sanitize = true }) {
-  const tempDirectory = path.join(os.tmpdir(), path.basename(filepath), "/");
+  const randomFileName = crypto.randomBytes(15).toString("hex");
+  const tempDirectory = path.join(
+    os.tmpdir(),
+    randomFileName,
+    path.basename(filepath),
+    "/"
+  );
   await fs.promises.mkdir(tempDirectory, { recursive: true });
   let counter = 0;
   let images = [];

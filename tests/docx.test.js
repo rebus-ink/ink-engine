@@ -3,6 +3,13 @@ const process = require("../");
 const formats = require("../src/formats");
 // const fs = require("fs");
 const path = require("path");
+const os = require("os");
+
+tap.cleanSnapshot = s => {
+  const tempdir = os.tmpdir();
+  const reg = new RegExp(`"${tempdir}[^"]+"`, "g");
+  return s.replace(reg, '"TMPDIR"');
+};
 
 const docxPath = path.join(__dirname, "fixtures/test.docx");
 
