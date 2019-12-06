@@ -41,7 +41,11 @@ module.exports = epub;
  * @param {string} file
  * @param {(import("vfile").VFile) => Promise<string} extract
  */
-async function epub(file, extract, { sanitize = true }) {
+async function epub(
+  file,
+  extract,
+  { sanitize = true, cssPrefix = "#ink-engine" }
+) {
   /**
    * @type {Object.<string, string>}
    */
@@ -138,7 +142,7 @@ async function epub(file, extract, { sanitize = true }) {
           path.join(tempDirectory, resource.url),
           "utf8"
         );
-        const clean = await processCSS(file, resource.url);
+        const clean = await processCSS(file, resource.url, cssPrefix);
         const cleanedFile = vfile({
           contents: clean,
           path: path.join(tempDirectory, resource.url)

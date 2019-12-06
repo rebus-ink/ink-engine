@@ -11,7 +11,7 @@ module.exports = setup;
 
 // Test by mocking the admin, bucket, and file endpoints.
 // This setup needs to take a done callback that knows what to do with the book and what to do if there is an error.
-function setup(admin, done) {
+function setup(storage, done) {
   return async function onFinalize(object, context) {
     const fileBucket = object.bucket;
     const filePath = object.name;
@@ -26,7 +26,7 @@ function setup(admin, done) {
     // The pubId should be the publication pathname, not its full URL
     const targetPath = [userType, userId, "documents", pubId].join("/");
     const thumbnailPath = [userType, userId, "thumbnails", pubId].join("/");
-    const bucket = admin.storage().bucket(fileBucket);
+    const bucket = storage.bucket(fileBucket);
     const tempFilePath = path.join(os.tmpdir(), fileName);
     let book;
     try {

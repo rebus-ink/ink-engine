@@ -1,5 +1,5 @@
-const { select } = require("hast-util-select");
-const h = require("hastscript");
+// const { select } = require("hast-util-select");
+// const h = require("hastscript");
 const visit = require("unist-util-visit");
 const is = require("hast-util-is-element");
 const has = require("hast-util-has-property");
@@ -37,17 +37,17 @@ function attacher(options) {
 module.exports = attacher;
 
 function transform(node, file, { prefix = "#ink-engine" } = {}) {
-  const body = select("body", node);
-  const inkHTML = h("ink-html");
-  const inkBody = Object.assign({}, body, { tagName: "ink-body" });
-  inkHTML.children = [inkBody];
-  const replacementBody = h(`body${prefix}`, inkHTML);
-  const html = select("html", node);
-  html.children.forEach((child, index) => {
-    if (child.tagName === "body") {
-      html.children[index] = replacementBody;
-    }
-  });
+  // const body = select("body", node);
+  // const inkHTML = h("ink-html");
+  // const inkBody = Object.assign({}, body, { tagName: "ink-body" });
+  // inkHTML.children = [inkBody];
+  // const replacementBody = h(`body${prefix}`, inkHTML);
+  // const html = select("html", node);
+  // html.children.forEach((child, index) => {
+  //   if (child.tagName === "body") {
+  //     html.children[index] = replacementBody;
+  //   }
+  // });
   const data = Object.assign({}, node.data, {
     book: file.data.book,
     resource: file.data.resource,

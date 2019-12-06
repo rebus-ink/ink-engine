@@ -13,13 +13,9 @@ tap.cleanSnapshot = s => {
 
 tap.test("upload finalize", async test => {
   // Mocks
-  const admin = {
-    storage() {
-      return {
-        bucket() {
-          return bucket;
-        }
-      };
+  const storage = {
+    bucket() {
+      return bucket;
     }
   };
 
@@ -37,7 +33,7 @@ tap.test("upload finalize", async test => {
       };
     }
   };
-  const finalise = setup(admin, done);
+  const finalise = setup(storage, done);
   await finalise({
     name: "user/user-123/publications/test-1234/test-epub.epub",
     bucket: "test-bucket",
@@ -51,13 +47,9 @@ tap.test("upload finalize", async test => {
 
 tap.test("upload finalize errors", async test => {
   // Mocks
-  const admin = {
-    storage() {
-      return {
-        bucket() {
-          return bucket;
-        }
-      };
+  const storage = {
+    bucket() {
+      return bucket;
     }
   };
 
@@ -75,7 +67,7 @@ tap.test("upload finalize errors", async test => {
       };
     }
   };
-  const finalise = setup(admin, done);
+  const finalise = setup(storage, done);
   await finalise({
     name: "user/user-123/publications/test-1234/test-epub.epub",
     bucket: "test-bucket",
@@ -91,13 +83,9 @@ const docxPath = path.join(__dirname, "fixtures/test.docx");
 
 tap.test("upload finalize docx", async test => {
   // Mocks
-  const admin = {
-    storage() {
-      return {
-        bucket() {
-          return bucket;
-        }
-      };
+  const storage = {
+    bucket() {
+      return bucket;
     }
   };
 
@@ -115,7 +103,7 @@ tap.test("upload finalize docx", async test => {
       };
     }
   };
-  const finalise = setup(admin, done);
+  const finalise = setup(storage, done);
   await finalise({
     name: "user/user-123/publications/test-1234/test.docx",
     bucket: "test-bucket",
