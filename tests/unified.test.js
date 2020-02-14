@@ -26,7 +26,7 @@ tap.test("parse html for processor", async test => {
       encodingFormat: "application/xhtml+xml"
     }
   };
-  const result = await parser(null, html);
+  const result = await parser(html, file);
   test.matchSnapshot(result, "parse xhtml, invalid");
 });
 

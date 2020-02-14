@@ -2,12 +2,12 @@
   "name": "ink-engine",
   "version": "0.1.0",
   "description": "Process documents as W3C Publications",
-  "license": "GPL-3.0-or-later",
+  "license": "Apache-2.0",
   "scripts": {
     "lint": "healthier && prettier --write --plugin-search-dir=. '**/*.{js,json,css,yml,svelte}'",
     "pretest": "npm run lint",
     "prepublishOnly": "npm run lint",
-    "test": "tap tests/*.test.js",
+    "test": "tap tests/*.test.js  --timeout=100",
     "snapshots": "TAP_SNAPSHOT=1 npm run test && prettier --write --plugin-search-dir=. '**/*.{js,json,css,yml,svelte}'"
   },
   "engines": {
@@ -31,6 +31,7 @@
     "jsdom": "^15.2.1",
     "mammoth": "^1.4.9",
     "mime": "^2.4.4",
+    "nlcst-to-string": "^2.0.3",
     "postcss": "^7.0.23",
     "postcss-prefix-selector": "^1.7.2",
     "postcss-selector-parser": "^6.0.2",
@@ -38,7 +39,9 @@
     "property-information": "^5.3.0",
     "rehype-slug": "^2.0.3",
     "rehype-stringify": "^6.0.1",
+    "retext-keywords": "^5.0.0",
     "retext-latin": "^2.0.4",
+    "retext-pos": "^2.0.2",
     "rimraf": "^3.0.0",
     "sharp": "^0.23.3",
     "to-vfile": "^6.0.0",

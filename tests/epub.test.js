@@ -11,7 +11,7 @@ tap.cleanSnapshot = s => {
   return s.replace(reg, '"TMPDIR"');
 };
 
-const epubPath = path.join(__dirname, "fixtures/test-epub.epub");
+const epubPath = path.join(__dirname, "fixtures/moby-dick.epub");
 
 tap.test("epub process", async test => {
   const processor = formats.epub;
@@ -31,8 +31,9 @@ tap.test("epub process", async test => {
 tap.test("epub process - sanitise false", async test => {
   const processor = formats.epub;
   test.equal(processor, formats["application/epub+zip"]);
-  function extract(vfile, resource, metadata) {
+  async function extract(vfile, resource, metadata) {
     test.matchSnapshot(vfile, "epub unsanitised file " + resource.url);
+    // await fs.promises.writeFile("testfiles/" + resource.url, vfile.contents);
     test.matchSnapshot(resource, "epub unsanitised resource " + resource.url);
     return Promise.resolve("uploaded/" + resource.url);
   }

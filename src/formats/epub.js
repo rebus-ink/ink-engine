@@ -186,12 +186,14 @@ async function epub(
     })
     .filter(file => file.data.resource.encodingFormat.includes("html"));
   // call processor and extract generated json
-  const { wordcount } = await process(
+  const result = await process(
     { files, cwd: tempDirectory, output: tempDirectory },
     extract
   );
   book.resources = book.resources.map(updateURL);
-  book.wordCount = wordcount;
+  if (result.wordcount) {
+    book.wordCount = result.wordcount;
+  }
   await rimraf(tempDirectory);
   return book;
   function updateURL(resource) {
