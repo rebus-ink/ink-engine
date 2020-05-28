@@ -4,10 +4,8 @@
  * Re-generate by setting TAP_SNAPSHOT=1 and running tests.
  * Make sure to inspect the output below.  Do not ignore changes!
  */
-"use strict";
-exports[
-  `tests/unified.test.js TAP parse html for processor > parse xhtml, invalid 1`
-] = `
+'use strict'
+exports[`tests/unified.test.js TAP parse html for processor > parse xhtml, invalid 1`] = `
 Object {
   "children": Array [
     Object {
@@ -116,4 +114,4 @@ Object {
   ],
   "type": "root",
 }
-`;
+`

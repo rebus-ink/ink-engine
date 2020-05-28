@@ -1,0 +1,2822 @@
+{
+  "contents": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "html",
+        "properties": {
+          "xmlns": "http://www.w3.org/1999/xhtml"
+        },
+        "children": [
+          {
+            "type": "text",
+            "value": "\r\n"
+          },
+          {
+            "type": "element",
+            "tagName": "head",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "\r\n"
+              },
+              {
+                "type": "element",
+                "tagName": "title",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "\r\nMoby-Dick"
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tagName": "link",
+                "properties": {
+                  "type": "text/css",
+                  "href": "css/stylesheet.css",
+                  "rel": [
+                    "stylesheet"
+                  ]
+                },
+                "children": []
+              },
+              {
+                "type": "text",
+                "value": "\r\n"
+              },
+              {
+                "type": "text",
+                "value": "\r\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "\r\n"
+          },
+          {
+            "type": "element",
+            "tagName": "body",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "\r\n"
+              },
+              {
+                "type": "element",
+                "tagName": "section",
+                "properties": {
+                  "dataEpubType": "bodymatter chapter",
+                  "className": [
+                    "body-rw",
+                    "Chapter-rw"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "header",
+                    "properties": {},
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "\r\n"
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "h1",
+                        "properties": {
+                          "id": "chapter-113-the-forge",
+                          "dataInkLocation": 0
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Chapter 113. The Forge."
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 1
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "With matted beard, and swathed in a bristling shark-skin apron, about mid-day, Perth was standing between his forge and anvil, the latter placed upon an iron-wood log, with one hand holding a pike-head in the coals, and with the other at his forge’s lungs, when Captain Ahab came along, carrying in his hand a small rusty-looking leathern bag. While yet a little distance from the forge, moody Ahab paused; till at last, Perth, withdrawing his iron from the fire, began hammering it upon the anvil—the red mass sending off the sparks in thick hovering flights, some of which flew close to Ahab."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 2
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "“Are these thy Mother Carey’s chickens, Perth? they are always flying in thy wake; birds of good omen, too, but not to all;—look here, they burn; but thou—thou liv’st among them without a scorch.”"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 3
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "“Because I am scorched all over, Captain Ahab,” answered Perth, resting for a moment on his hammer; “I am past scorching; not easily can’st thou scorch a scar.”"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 4
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "“Well, well; no more. Thy shrunk voice sounds too calmly, sanely woeful to me. In no Paradise myself, I am impatient of all misery in others that is not mad. Thou should’st go mad, blacksmith; say, why dost thou not go mad? How can’st thou endure without being mad? Do the heavens yet hate thee, that thou can’st not go mad?—What wert thou making there?”"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 5
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "“Welding an old pike-head, sir; there were seams and dents in it.”"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 6
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "“And can’st thou make it all smooth again, blacksmith, after such hard usage as it had?”"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 7
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "“I think so, sir.”"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 8
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "“And I suppose thou can’st smoothe almost any seams and dents; never mind how hard the metal, blacksmith?”"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 9
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "“Aye, sir, I think I can; all seams and dents but one.”"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 10
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "“Look ye here, then,” cried Ahab, passionately advancing, and leaning with both hands on Perth’s shoulders; “look ye here—HERE—can ye smoothe out a seam like this, blacksmith,” sweeping one hand across his ribbed brow; “if thou could’st, blacksmith, glad enough would I lay my head upon thy anvil, and feel thy heaviest hammer between my eyes. Answer! Can’st thou smoothe this seam?”"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 11
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "“Oh! that is the one, sir! Said I not all seams and dents but one?”"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 12
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "“Aye, blacksmith, it is the one; aye, man, it is unsmoothable; for though thou only see’st it here in my flesh, it has worked down into the bone of my skull—THAT is all wrinkles! But, away with child’s play; no more gaffs and pikes to-day. Look ye here!” jingling the leathern bag, as if it were full of gold coins. “I, too, want a harpoon made; one that a thousand yoke of fiends could not part, Perth; something that will stick in a whale like his own fin-bone. There’s the stuff,” flinging the pouch upon the anvil. “Look ye, blacksmith, these are the gathered nail-stubbs of the steel shoes of racing horses.”"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 13
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "“Horse-shoe stubbs, sir? Why, Captain Ahab, thou hast here, then, the best and stubbornest stuff we blacksmiths ever work.”"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 14
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "“I know it, old man; these stubbs will weld together like glue from the melted bones of murderers. Quick! forge me the harpoon. And forge me first, twelve rods for its shank; then wind, and twist, and hammer these twelve together like the yarns and strands of a tow-line. Quick! I’ll blow the fire.”"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 15
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "When at last the twelve rods were made, Ahab tried them, one by one, by spiralling them, with his own hand, round a long, heavy iron bolt. “A flaw!” rejecting the last one. “Work that over again, Perth.”"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 16
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "This done, Perth was about to begin welding the twelve into one, when Ahab stayed his hand, and said he would weld his own iron. As, then, with regular, gasping hems, he hammered on the anvil, Perth passing to him the glowing rods, one after the other, and the hard pressed forge shooting up its intense straight flame, the Parsee passed silently, and bowing over his head towards the fire, seemed invoking some curse or some blessing on the toil. But, as Ahab looked up, he slid aside."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 17
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "“What’s that bunch of lucifers dodging about there for?” muttered Stubb, looking on from the forecastle. “That Parsee smells fire like a fusee; and smells of it himself, like a hot musket’s powder-pan.”"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 18
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "At last the shank, in one complete rod, received its final heat; and as Perth, to temper it, plunged it all hissing into the cask of water near by, the scalding steam shot up into Ahab’s bent face."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 19
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "“Would’st thou brand me, Perth?” wincing for a moment with the pain; “have I been but forging my own branding-iron, then?”"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 20
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "“Pray God, not that; yet I fear something, Captain Ahab. Is not this harpoon for the White Whale?”"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 21
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "“For the white fiend! But now for the barbs; thou must make them thyself, man. Here are my razors—the best of steel; here, and make the barbs sharp as the needle-sleet of the Icy Sea.”"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 22
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "For a moment, the old blacksmith eyed the razors as though he would fain not use them."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 23
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "“Take them, man, I have no need for them; for I now neither shave, sup, nor pray till—but here—to work!”"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 24
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Fashioned at last into an arrowy shape, and welded by Perth to the shank, the steel soon pointed the end of the iron; and as the blacksmith was about giving the barbs their final heat, prior to tempering them, he cried to Ahab to place the water-cask near."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 25
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "“No, no—no water for that; I want it of the true death-temper. Ahoy, there! Tashtego, Queequeg, Daggoo! What say ye, pagans! Will ye give me as much blood as will cover this barb?” holding it high up. A cluster of dark nods replied, Yes. Three punctures were made in the heathen flesh, and the White Whale’s barbs were then tempered."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 26
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "“Ego non baptizo te in nomine patris, sed in nomine diaboli!” deliriously howled Ahab, as the malignant iron scorchingly devoured the baptismal blood."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 27
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Now, mustering the spare poles from below, and selecting one of hickory, with the bark still investing it, Ahab fitted the end to the socket of the iron. A coil of new tow-line was then unwound, and some fathoms of it taken to the windlass, and stretched to a great tension. Pressing his foot upon it, till the rope hummed like a harp-string, then eagerly bending over it, and seeing no strandings, Ahab exclaimed, “Good! and now for the seizings.”"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "dataInkLocation": 28
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "At one extremity the rope was unstranded, and the separate spread yarns were all braided and woven round the socket of the harpoon; the pole was then driven hard up into the socket; from the lower end the rope was traced half-way along the pole’s length, and firmly secured so, with intertwistings of twine. This done, pole, iron, and rope—like the Three Fates—remained inseparable, and Ahab moodily stalked away with the weapon; the sound of his ivory leg, and the sound of the hickory pole, both hollowly ringing along every plank. But ere he entered his cabin, light, unnatural, half-bantering, yet most piteous sound was heard. Oh, Pip! thy wretched laugh, thy idle but unresting eye; all thy strange mummeries not unmeaningly blended with the black tragedy of the melancholy ship, and mocked it!"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "data": {}
+  },
+  "resource": {
+    "url": "OPS/chapter_113.xhtml.json",
+    "rel": [],
+    "encodingFormat": "application/json"
+  },
+  "toc": {
+    "type": "html",
+    "url": "contents.json",
+    "children": [
+      {
+        "children": [],
+        "label": "Moby-Dick",
+        "url": "OPS/titlepage.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Original Transcriber’s Notes:",
+        "url": "OPS/preface_001.xhtml"
+      },
+      {
+        "children": [],
+        "label": "ETYMOLOGY.",
+        "url": "OPS/introduction_001.xhtml"
+      },
+      {
+        "children": [],
+        "label": "EXTRACTS (Supplied by a Sub-Sub-Librarian).",
+        "url": "OPS/epigraph_001.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 1. Loomings.",
+        "url": "OPS/chapter_001.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 2. The Carpet-Bag.",
+        "url": "OPS/chapter_002.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 3. The Spouter-Inn.",
+        "url": "OPS/chapter_003.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 4. The Counterpane.",
+        "url": "OPS/chapter_004.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 5. Breakfast.",
+        "url": "OPS/chapter_005.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 6. The Street.",
+        "url": "OPS/chapter_006.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 7. The Chapel.",
+        "url": "OPS/chapter_007.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 8. The Pulpit.",
+        "url": "OPS/chapter_008.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 9. The Sermon.",
+        "url": "OPS/chapter_009.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 10. A Bosom Friend.",
+        "url": "OPS/chapter_010.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 11. Nightgown.",
+        "url": "OPS/chapter_011.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 12. Biographical.",
+        "url": "OPS/chapter_012.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 13. Wheelbarrow.",
+        "url": "OPS/chapter_013.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 14. Nantucket.",
+        "url": "OPS/chapter_014.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 15. Chowder.",
+        "url": "OPS/chapter_015.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 16. The Ship.",
+        "url": "OPS/chapter_016.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 17. The Ramadan.",
+        "url": "OPS/chapter_017.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 18. His Mark.",
+        "url": "OPS/chapter_018.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 19. The Prophet.",
+        "url": "OPS/chapter_019.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 20. All Astir.",
+        "url": "OPS/chapter_020.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 21. Going Aboard.",
+        "url": "OPS/chapter_021.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 22. Merry Christmas.",
+        "url": "OPS/chapter_022.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 23. The Lee Shore.",
+        "url": "OPS/chapter_023.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 24. The Advocate.",
+        "url": "OPS/chapter_024.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 25. Postscript.",
+        "url": "OPS/chapter_025.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 26. Knights and Squires.",
+        "url": "OPS/chapter_026.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 27. Knights and Squires.",
+        "url": "OPS/chapter_027.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 28. Ahab.",
+        "url": "OPS/chapter_028.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 29. Enter Ahab; to Him, Stubb.",
+        "url": "OPS/chapter_029.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 30. The Pipe.",
+        "url": "OPS/chapter_030.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 31. Queen Mab.",
+        "url": "OPS/chapter_031.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 32. Cetology.",
+        "url": "OPS/chapter_032.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 33. The Specksnyder.",
+        "url": "OPS/chapter_033.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 34. The Cabin-Table.",
+        "url": "OPS/chapter_034.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 35. The Mast-Head.",
+        "url": "OPS/chapter_035.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 36. The Quarter-Deck.",
+        "url": "OPS/chapter_036.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 37. Sunset.",
+        "url": "OPS/chapter_037.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 38. Dusk.",
+        "url": "OPS/chapter_038.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 39. First Night Watch.",
+        "url": "OPS/chapter_039.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 40. Midnight, Forecastle.",
+        "url": "OPS/chapter_040.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 41. Moby Dick.",
+        "url": "OPS/chapter_041.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 42. The Whiteness of The Whale.",
+        "url": "OPS/chapter_042.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 43. Hark!",
+        "url": "OPS/chapter_043.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 44. The Chart.",
+        "url": "OPS/chapter_044.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 45. The Affidavit.",
+        "url": "OPS/chapter_045.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 46. Surmises.",
+        "url": "OPS/chapter_046.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 47. The Mat-Maker.",
+        "url": "OPS/chapter_047.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 48. The First Lowering.",
+        "url": "OPS/chapter_048.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 49. The Hyena.",
+        "url": "OPS/chapter_049.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 50. Ahab’s Boat and Crew. Fedallah.",
+        "url": "OPS/chapter_050.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 51. The Spirit-Spout.",
+        "url": "OPS/chapter_051.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 52. The Albatross.",
+        "url": "OPS/chapter_052.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 53. The Gam.",
+        "url": "OPS/chapter_053.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 54. The Town-Ho’s Story.",
+        "url": "OPS/chapter_054.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 55. Of the Monstrous Pictures of Whales.",
+        "url": "OPS/chapter_055.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 56. Of the Less Erroneous Pictures of Whales, and the True",
+        "url": "OPS/chapter_056.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 57. Of Whales in Paint; in Teeth; in Wood; in Sheet-Iron; in",
+        "url": "OPS/chapter_057.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 58. Brit.",
+        "url": "OPS/chapter_058.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 59. Squid.",
+        "url": "OPS/chapter_059.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 60. The Line.",
+        "url": "OPS/chapter_060.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 61. Stubb Kills a Whale.",
+        "url": "OPS/chapter_061.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 62. The Dart.",
+        "url": "OPS/chapter_062.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 63. The Crotch.",
+        "url": "OPS/chapter_063.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 64. Stubb’s Supper.",
+        "url": "OPS/chapter_064.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 65. The Whale as a Dish.",
+        "url": "OPS/chapter_065.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 66. The Shark Massacre.",
+        "url": "OPS/chapter_066.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 67. Cutting In.",
+        "url": "OPS/chapter_067.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 68. The Blanket.",
+        "url": "OPS/chapter_068.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 69. The Funeral.",
+        "url": "OPS/chapter_069.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 70. The Sphynx.",
+        "url": "OPS/chapter_070.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 71. The Jeroboam’s Story.",
+        "url": "OPS/chapter_071.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 72. The Monkey-Rope.",
+        "url": "OPS/chapter_072.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 73. Stubb and Flask Kill a Right Whale; and Then Have a Talk",
+        "url": "OPS/chapter_073.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 74. The Sperm Whale’s Head—Contrasted View.",
+        "url": "OPS/chapter_074.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 75. The Right Whale’s Head—Contrasted View.",
+        "url": "OPS/chapter_075.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 76. The Battering-Ram.",
+        "url": "OPS/chapter_076.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 77. The Great Heidelburgh Tun.",
+        "url": "OPS/chapter_077.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 78. Cistern and Buckets.",
+        "url": "OPS/chapter_078.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 79. The Prairie.",
+        "url": "OPS/chapter_079.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 80. The Nut.",
+        "url": "OPS/chapter_080.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 81. The Pequod Meets The Virgin.",
+        "url": "OPS/chapter_081.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 82. The Honour and Glory of Whaling.",
+        "url": "OPS/chapter_082.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 83. Jonah Historically Regarded.",
+        "url": "OPS/chapter_083.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 84. Pitchpoling.",
+        "url": "OPS/chapter_084.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 85. The Fountain.",
+        "url": "OPS/chapter_085.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 86. The Tail.",
+        "url": "OPS/chapter_086.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 87. The Grand Armada.",
+        "url": "OPS/chapter_087.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 88. Schools and Schoolmasters.",
+        "url": "OPS/chapter_088.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 89. Fast-Fish and Loose-Fish.",
+        "url": "OPS/chapter_089.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 90. Heads or Tails.",
+        "url": "OPS/chapter_090.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 91. The Pequod Meets The Rose-Bud.",
+        "url": "OPS/chapter_091.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 92. Ambergris.",
+        "url": "OPS/chapter_092.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 93. The Castaway.",
+        "url": "OPS/chapter_093.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 94. A Squeeze of the Hand.",
+        "url": "OPS/chapter_094.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 95. The Cassock.",
+        "url": "OPS/chapter_095.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 96. The Try-Works.",
+        "url": "OPS/chapter_096.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 97. The Lamp.",
+        "url": "OPS/chapter_097.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 98. Stowing Down and Clearing Up.",
+        "url": "OPS/chapter_098.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 99. The Doubloon.",
+        "url": "OPS/chapter_099.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 100. Leg and Arm.",
+        "url": "OPS/chapter_100.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 101. The Decanter.",
+        "url": "OPS/chapter_101.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 102. A Bower in the Arsacides.",
+        "url": "OPS/chapter_102.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 103. Measurement of The Whale’s Skeleton.",
+        "url": "OPS/chapter_103.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 104. The Fossil Whale.",
+        "url": "OPS/chapter_104.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 105. Does the Whale’s Magnitude Diminish?—Will He Perish?",
+        "url": "OPS/chapter_105.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 106. Ahab’s Leg.",
+        "url": "OPS/chapter_106.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 107. The Carpenter.",
+        "url": "OPS/chapter_107.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 108. Ahab and the Carpenter.",
+        "url": "OPS/chapter_108.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 109. Ahab and Starbuck in the Cabin.",
+        "url": "OPS/chapter_109.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 110. Queequeg in His Coffin.",
+        "url": "OPS/chapter_110.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 111. The Pacific.",
+        "url": "OPS/chapter_111.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 112. The Blacksmith.",
+        "url": "OPS/chapter_112.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 113. The Forge.",
+        "url": "OPS/chapter_113.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 114. The Gilder.",
+        "url": "OPS/chapter_114.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 115. The Pequod Meets The Bachelor.",
+        "url": "OPS/chapter_115.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 116. The Dying Whale.",
+        "url": "OPS/chapter_116.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 117. The Whale Watch.",
+        "url": "OPS/chapter_117.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 118. The Quadrant.",
+        "url": "OPS/chapter_118.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 119. The Candles.",
+        "url": "OPS/chapter_119.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 120. The Deck Towards the End of the First Night Watch.",
+        "url": "OPS/chapter_120.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 121. Midnight.—The Forecastle Bulwarks.",
+        "url": "OPS/chapter_121.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 122. Midnight Aloft.—Thunder and Lightning.",
+        "url": "OPS/chapter_122.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 123. The Musket.",
+        "url": "OPS/chapter_123.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 124. The Needle.",
+        "url": "OPS/chapter_124.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 125. The Log and Line.",
+        "url": "OPS/chapter_125.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 126. The Life-Buoy.",
+        "url": "OPS/chapter_126.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 127. The Deck.",
+        "url": "OPS/chapter_127.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 128. The Pequod Meets The Rachel.",
+        "url": "OPS/chapter_128.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 129. The Cabin.",
+        "url": "OPS/chapter_129.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 130. The Hat.",
+        "url": "OPS/chapter_130.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 131. The Pequod Meets The Delight.",
+        "url": "OPS/chapter_131.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 132. The Symphony.",
+        "url": "OPS/chapter_132.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 133. The Chase—First Day.",
+        "url": "OPS/chapter_133.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 134. The Chase—Second Day.",
+        "url": "OPS/chapter_134.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Chapter 135. The Chase.—Third Day.",
+        "url": "OPS/chapter_135.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Epilogue",
+        "url": "OPS/chapter_136.xhtml"
+      },
+      {
+        "children": [],
+        "label": "Copyright Page",
+        "url": "OPS/copyright.xhtml"
+      }
+    ]
+  },
+  "book": {
+    "type": "Publication",
+    "links": [],
+    "resources": [
+      {
+        "url": "OPS/fonts/STIXGeneral.otf",
+        "rel": [],
+        "encodingFormat": "application/vnd.ms-opentype"
+      },
+      {
+        "url": "OPS/fonts/STIXGeneralItalic.otf",
+        "rel": [],
+        "encodingFormat": "application/vnd.ms-opentype"
+      },
+      {
+        "url": "OPS/fonts/STIXGeneralBol.otf",
+        "rel": [],
+        "encodingFormat": "application/vnd.ms-opentype"
+      },
+      {
+        "url": "OPS/fonts/STIXGeneralBolIta.otf",
+        "rel": [],
+        "encodingFormat": "application/vnd.ms-opentype"
+      },
+      {
+        "url": "OPS/toc.xhtml",
+        "rel": [
+          "contents"
+        ],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/copyright.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/titlepage.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/cover.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/images/9780316000000.jpg",
+        "rel": [
+          "cover"
+        ],
+        "encodingFormat": "image/jpeg"
+      },
+      {
+        "url": "OPS/css/stylesheet.css",
+        "rel": [],
+        "encodingFormat": "text/css"
+      },
+      {
+        "url": "OPS/images/Moby-Dick_FE_title_page.jpg",
+        "rel": [],
+        "encodingFormat": "image/jpeg"
+      },
+      {
+        "url": "OPS/preface_001.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/introduction_001.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/epigraph_001.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_001.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_002.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_003.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_004.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_005.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_006.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_007.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_008.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_009.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_010.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_011.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_012.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_013.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_014.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_015.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_016.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_017.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_018.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_019.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_020.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_021.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_022.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_023.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_024.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_025.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_026.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_027.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_028.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_029.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_030.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_031.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_032.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_033.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_034.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_035.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_036.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_037.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_038.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_039.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_040.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_041.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_042.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_043.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_044.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_045.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_046.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_047.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_048.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_049.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_050.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_051.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_052.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_053.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_054.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_055.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_056.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_057.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_058.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_059.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_060.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_061.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_062.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_063.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_064.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_065.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_066.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_067.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_068.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_069.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_070.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_071.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_072.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_073.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_074.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_075.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_076.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_077.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_078.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_079.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_080.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_081.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_082.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_083.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_084.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_085.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_086.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_087.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_088.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_089.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_090.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_091.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_092.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_093.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_094.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_095.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_096.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_097.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_098.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_099.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_100.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_101.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_102.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_103.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_104.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_105.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_106.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_107.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_108.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_109.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_110.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_111.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_112.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_113.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_114.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_115.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_116.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_117.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_118.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_119.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_120.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_121.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_122.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_123.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_124.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_125.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_126.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_127.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_128.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_129.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_130.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_131.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_132.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_133.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_134.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_135.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_136.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/toc-short.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "type": "LinkedResource",
+        "rel": [
+          "alternate",
+          "describedby"
+        ],
+        "url": "OPS/package.opf",
+        "encodingFormat": "application/oebps-package+xml"
+      }
+    ],
+    "readingOrder": [
+      {
+        "url": "OPS/titlepage.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/toc-short.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/preface_001.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/introduction_001.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/epigraph_001.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_001.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_002.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_003.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_004.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_005.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_006.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_007.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_008.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_009.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_010.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_011.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_012.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_013.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_014.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_015.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_016.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_017.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_018.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_019.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_020.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_021.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_022.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_023.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_024.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_025.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_026.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_027.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_028.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_029.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_030.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_031.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_032.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_033.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_034.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_035.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_036.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_037.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_038.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_039.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_040.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_041.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_042.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_043.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_044.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_045.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_046.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_047.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_048.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_049.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_050.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_051.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_052.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_053.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_054.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_055.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_056.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_057.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_058.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_059.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_060.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_061.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_062.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_063.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_064.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_065.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_066.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_067.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_068.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_069.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_070.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_071.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_072.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_073.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_074.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_075.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_076.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_077.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_078.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_079.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_080.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_081.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_082.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_083.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_084.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_085.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_086.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_087.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_088.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_089.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_090.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_091.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_092.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_093.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_094.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_095.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_096.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_097.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_098.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_099.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_100.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_101.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_102.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_103.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_104.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_105.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_106.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_107.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_108.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_109.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_110.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_111.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_112.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_113.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_114.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_115.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_116.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_117.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_118.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_119.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_120.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_121.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_122.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_123.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_124.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_125.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_126.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_127.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_128.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_129.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_130.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_131.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_132.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_133.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_134.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_135.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/chapter_136.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      },
+      {
+        "url": "OPS/copyright.xhtml",
+        "rel": [],
+        "encodingFormat": "application/xhtml+xml"
+      }
+    ],
+    "json": {
+      "epubVersion": "3.0"
+    },
+    "inLanguage": "en-US",
+    "name": "Moby-Dick",
+    "identifier": "code.google.com.epub-samples.moby-dick-basic",
+    "creator": [],
+    "publisher": [
+      "Harper & Brothers, Publishers"
+    ],
+    "author": [
+      "Herman Melville"
+    ],
+    "translator": [],
+    "illustrator": [],
+    "editor": [],
+    "colorist": [],
+    "contributor": [
+      "Dave Cramer"
+    ]
+  }
+}

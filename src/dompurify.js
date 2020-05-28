@@ -16,7 +16,8 @@ const purifyConfig = {
 module.exports = async function purifyPreprocess(
   chapter,
   chapterPath,
-  contentType = "text/html"
+  contentType = "text/html",
+  returnDom = false
 ) {
   const resourceURL = new URL(chapterPath, "https://example.com/");
   let dom;
@@ -50,7 +51,7 @@ module.exports = async function purifyPreprocess(
     }
   }
   const clean = purify(resourceURL, window);
-  return dom.serialize(clean);
+  return returnDom ? window.document : dom.serialize(clean);
 };
 
 function purify(resourceURL, window) {

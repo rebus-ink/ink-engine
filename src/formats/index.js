@@ -1,5 +1,5 @@
-const docx = require("./docx");
-const epub = require("./epub");
+const docx = require("./DocxProcess");
+const epub = require("./EpubProcess");
 
 module.exports = {
   "application/epub+zip": epub,

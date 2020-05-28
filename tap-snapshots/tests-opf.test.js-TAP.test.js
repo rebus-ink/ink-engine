@@ -4,7 +4,7 @@
  * Re-generate by setting TAP_SNAPSHOT=1 and running tests.
  * Make sure to inspect the output below.  Do not ignore changes!
  */
-"use strict";
+'use strict'
 exports[`tests/opf.test.js TAP parseOPF - epub2 > parseOPF - epub2 1`] = `
 Object {
   "author": Array [
@@ -398,7 +398,7 @@ Object {
   ],
   "type": "Publication",
 }
-`;
+`
 
 exports[`tests/opf.test.js TAP parseOPF - epub3 > parseOPF - epub3 1`] = `
 Object {
@@ -505,4 +505,4 @@ Object {
   ],
   "type": "Publication",
 }
-`;
+`
