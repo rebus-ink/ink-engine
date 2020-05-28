@@ -11,7 +11,7 @@
     "snapshots": "TAP_SNAPSHOT=1 npm run test && prettier --write --plugin-search-dir=. '**/*.{js,json,css,yml,svelte}'"
   },
   "engines": {
-    "node": "10"
+    "node": ">10"
   },
   "healthier": {
     "ignore": [
