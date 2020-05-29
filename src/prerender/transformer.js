@@ -18,24 +18,15 @@ module.exports = attacher;
 function transform(
   node,
   file,
-  {
-    prefix = "#ink-engine",
-    mediaBase = "/",
-    linkBase = "/",
-    chapterBase = "/"
-  } = {}
+  { prefix = "#ink-engine", mediaBase = "/", linkBase = "/" } = {}
 ) {
   function rebase(path, base) {
     const baseURL = new URL(base, "https://www.example.com/");
-    const absoluteURL = new URL(
-      path,
-      new URL(chapterBase, "https://www.example.com/")
-    );
-    const url = new URL(`/${absoluteURL.pathname}${absoluteURL.hash}`, baseURL);
-    if (url.host === "https://www.example.com/") {
-      return `/${url.pathname}${url.hash}`;
+    const absoluteURL = new URL(path, baseURL);
+    if (absoluteURL.host !== "www.example.com") {
+      return absoluteURL.href;
     } else {
-      return url.href;
+      return `${absoluteURL.pathname}${absoluteURL.hash}`;
     }
   }
   const data = Object.assign({}, node.data, {
@@ -62,7 +53,7 @@ function transform(
       node.properties.srcset = srcset.stringify(parsed);
     }
     if (has(node, "href") && is(node, ["a"])) {
-      node.properties.src = rebase(node.properties.src, linkBase);
+      node.properties.href = rebase(node.properties.href, linkBase);
     }
   });
   const body = select("body", node);

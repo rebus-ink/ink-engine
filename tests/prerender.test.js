@@ -19,8 +19,7 @@ tap.test("prerender", async test => {
     ));
     const processed = await prerender(chapter, {
       mediaBase: "/api/store/",
-      linkBase: "/reader/id/storage/",
-      chapterBase: resource.url
+      linkBase: "/reader/id/storage/"
     });
     test.matchSnapshot(processed, "prerender" + resource.url);
   }
