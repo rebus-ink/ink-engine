@@ -1,7 +1,8 @@
 const getProcessor = require("./processor");
 
 module.exports = async function preRender(data, options) {
-  const chapter = Object.assign({}, data);
+  const { annotations = [] } = options;
+  const chapter = Object.assign({annotations}, data);
   const processor = getProcessor(options);
   const tree = await processor.run(data.contents);
   chapter.stylesheets = tree.data.stylesheets;

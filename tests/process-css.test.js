@@ -2,7 +2,12 @@ const tap = require("tap");
 const processCSS = require("../src/postcss");
 
 tap.test("processCSS", async test => {
-  const css = `html.js body.testClass span.someClass {background-color: red; position: fixed; text-align: justify; fake-property: bling; --custom-property: url('what-is-this/image.png'); background-image: url('https://dangerous.example.com/test.png')} div {position: fixed;}`;
+  const css = `html.js body.testClass span.someClass {background-color: red; position: fixed; text-align: justify; fake-property: bling; --custom-property: url('what-is-this/image.png'); background-image: url('https://dangerous.example.com/test.png')} div {position: fixed;}@font-face {
+    font-family: "Stix";
+    font-weight: normal;
+    font-style: normal;
+    src: url(../fonts/STIXGeneral.otf);
+  }`;
   const result = await processCSS(css, "styles/test.css");
   test.matchSnapshot(result, "parseCSS basic");
 });

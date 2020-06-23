@@ -10,7 +10,12 @@ exports[`tests/process-css.test.js TAP processCSS > parseCSS @import 1`] = `
 `
 
 exports[`tests/process-css.test.js TAP processCSS > parseCSS basic 1`] = `
-#ink-engine ink-html.js ink-body.testClass span.someClass {background-color: red; --custom-property: url('what-is-this/image.png')}
+#ink-engine ink-html.js ink-body.testClass span.someClass {background-color: red; --custom-property: url('what-is-this/image.png')}@font-face {
+    font-family: "Stix";
+    font-weight: normal;
+    font-style: normal;
+    src: url(../fonts/STIXGeneral.otf);
+  }
 `
 
 exports[`tests/process-css.test.js TAP processCSS > parseCSS data url 1`] = `

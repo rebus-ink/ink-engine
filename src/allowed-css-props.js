@@ -349,6 +349,7 @@ const cssProps = [
   "speak-numeral",
   "speak-punctuation",
   "speech-rate",
+  "src",
   "stress",
   "string-set",
   "stroke",

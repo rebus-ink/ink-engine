@@ -118,6 +118,17 @@ module.exports = class Epub {
   async process() {
     await this.extractFiles();
     await this.getOpf();
+    const bookFile = vfile({
+      contents: JSON.stringify(this.book),
+      path: "index.json"
+    });
+    await this.extract(
+      bookFile,
+      Object.assign({ url: "index.json" }, this.book),
+      {
+        contentType: "application/json"
+      }
+    );
     await this.getContents();
     for (const resource of this.resources) {
       if (
@@ -141,17 +152,6 @@ module.exports = class Epub {
         });
       }
     }
-    const bookFile = vfile({
-      contents: JSON.stringify(this.book),
-      path: "index.json"
-    });
-    await this.extract(
-      bookFile,
-      Object.assign({ url: "index.json" }, this.book),
-      {
-        contentType: "application/json"
-      }
-    );
     await rimraf(this.tempDirectory);
     return this.book;
   }
