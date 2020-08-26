@@ -16,7 +16,7 @@ module.exports = class Markup {
       sanitize = true,
       cssPrefix = "#ink-engine",
       extract,
-      fragment = true,
+      fragment = false,
       name = path.basename(this.file, ".html")
     } = options;
     this.extract = extract;

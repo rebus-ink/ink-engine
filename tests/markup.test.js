@@ -14,7 +14,7 @@ const markupPath = path.join(__dirname, "fixtures/test-markup.html");
 const fragmentPath = path.join(__dirname, "fixtures/test-markup-fragment.html");
 
 tap.test("MarkupProcess", async test => {
-  const processor = new Markup(markupPath, { extract, fragment: false });
+  const processor = new Markup(markupPath, { extract });
   function extract(vfile, resource, metadata) {
     test.matchSnapshot(vfile.contents, "markup file " + resource.url);
     test.matchSnapshot(resource, "markup resource " + resource.url);
@@ -26,7 +26,7 @@ tap.test("MarkupProcess", async test => {
 });
 
 tap.test("MarkupProcess fragment", async test => {
-  const processor = new Markup(fragmentPath, { extract });
+  const processor = new Markup(fragmentPath, { extract, fragment: true });
   function extract(vfile, resource, metadata) {
     test.matchSnapshot(vfile.contents, "markup file " + resource.url);
     test.matchSnapshot(resource, "markup resource " + resource.url);
