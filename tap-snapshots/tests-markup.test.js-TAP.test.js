@@ -5,6 +5,10 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
+exports[`tests/markup.test.js TAP MarkupProcess > markup file contents.json 1`] = `
+{"heading":"test-markup Contents","type":"Markup","children":[{"children":[],"label":"test-markup","url":"index.html"}]}
+`
+
 exports[`tests/markup.test.js TAP MarkupProcess > markup file index.html.json 1`] = `
 {
   "contents": {
@@ -790,6 +794,18 @@ exports[`tests/markup.test.js TAP MarkupProcess > markup file index.html.json 1`
     ],
     "encodingFormat": "application/json"
   },
+  "toc": {
+    "heading": "test-markup Contents",
+    "type": "Markup",
+    "children": [
+      {
+        "children": [],
+        "label": "test-markup",
+        "url": "index.html"
+      }
+    ],
+    "url": "contents.json"
+  },
   "book": {
     "name": "test-markup",
     "resources": [
@@ -838,6 +854,21 @@ Object {
 }
 `
 
+exports[`tests/markup.test.js TAP MarkupProcess > markup resource contents.json 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [],
+      "label": "test-markup",
+      "url": "index.html",
+    },
+  ],
+  "heading": "test-markup Contents",
+  "type": "Markup",
+  "url": "contents.json",
+}
+`
+
 exports[`tests/markup.test.js TAP MarkupProcess > markup resource index.html.json 1`] = `
 Object {
   "encodingFormat": "application/json",
@@ -869,6 +900,10 @@ Object {
   ],
   "url": "index.json",
 }
+`
+
+exports[`tests/markup.test.js TAP MarkupProcess fragment > markup file contents.json 1`] = `
+{"heading":"test-markup-fragment Contents","type":"Markup","children":[{"children":[],"label":"test-markup-fragment","url":"index.html"}]}
 `
 
 exports[`tests/markup.test.js TAP MarkupProcess fragment > markup file index.html.json 1`] = `
@@ -1660,6 +1695,18 @@ exports[`tests/markup.test.js TAP MarkupProcess fragment > markup file index.htm
     ],
     "encodingFormat": "application/json"
   },
+  "toc": {
+    "heading": "test-markup-fragment Contents",
+    "type": "Markup",
+    "children": [
+      {
+        "children": [],
+        "label": "test-markup-fragment",
+        "url": "index.html"
+      }
+    ],
+    "url": "contents.json"
+  },
   "book": {
     "name": "test-markup-fragment",
     "resources": [
@@ -1705,6 +1752,21 @@ Object {
       "url": "index.html",
     },
   ],
+}
+`
+
+exports[`tests/markup.test.js TAP MarkupProcess fragment > markup resource contents.json 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [],
+      "label": "test-markup-fragment",
+      "url": "index.html",
+    },
+  ],
+  "heading": "test-markup-fragment Contents",
+  "type": "Markup",
+  "url": "contents.json",
 }
 `
 

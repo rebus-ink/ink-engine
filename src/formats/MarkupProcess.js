@@ -69,7 +69,7 @@ module.exports = class Markup {
     const contents = {
       contents: result.contents,
       resource,
-      toc: this.contents,
+      toc: this.toc,
       book: this.book
     };
     result.contents = JSON.stringify(contents, null, 2);
@@ -97,6 +97,22 @@ module.exports = class Markup {
         }
       ]
     };
+    this.toc = {
+      heading: this.book.name + " Contents",
+      type: "Markup",
+      children: [
+        {
+          children: [],
+          label: this.book.name,
+          url: "index.html"
+        }
+      ]
+    };
+    await this.extract(
+      { contents: JSON.stringify(this.toc) },
+      Object.assign(this.toc, { url: "contents.json" }),
+      { contentType: "application/json" }
+    );
     let html;
     if (this.fragment) {
       html = wrap(text, this.name);

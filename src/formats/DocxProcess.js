@@ -73,7 +73,7 @@ module.exports = class Docx {
     const contents = {
       contents: result.contents,
       resource,
-      toc: this.contents,
+      toc: this.toc,
       book: this.book
     };
     result.contents = JSON.stringify(contents, null, 2);
@@ -104,6 +104,22 @@ module.exports = class Docx {
         }
       ]
     };
+    this.toc = {
+      heading: this.book.name + " Contents",
+      type: "Docx",
+      children: [
+        {
+          children: [],
+          label: this.book.name,
+          url: "index.html"
+        }
+      ]
+    };
+    await this.extract(
+      { contents: JSON.stringify(this.toc) },
+      Object.assign(this.toc, { url: "contents.json" }),
+      { contentType: "application/json" }
+    );
     const htmlFile = await this.processMarkup(
       wrap(html.value, this.book.name),
       this.book.resources[0]
