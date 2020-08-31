@@ -113,7 +113,7 @@ module.exports = class Markup {
     //   });
     //   file.data.resource = image;
     // }
-    await this.extract(htmlFile, this.book.resources[0], {
+    await this.extract(htmlFile, htmlFile.data.resource, {
       contentType: "text/html"
     });
     const bookFile = vfile({

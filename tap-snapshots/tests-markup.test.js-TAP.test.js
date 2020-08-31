@@ -5,7 +5,7 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
-exports[`tests/markup.test.js TAP MarkupProcess > markup file index.html 1`] = `
+exports[`tests/markup.test.js TAP MarkupProcess > markup file index.html.json 1`] = `
 {
   "contents": {
     "type": "root",
@@ -838,13 +838,13 @@ Object {
 }
 `
 
-exports[`tests/markup.test.js TAP MarkupProcess > markup resource index.html 1`] = `
+exports[`tests/markup.test.js TAP MarkupProcess > markup resource index.html.json 1`] = `
 Object {
-  "encodingFormat": "text/html",
+  "encodingFormat": "application/json",
   "rel": Array [
     "alternate",
   ],
-  "url": "index.html",
+  "url": "index.html.json",
 }
 `
 
@@ -871,7 +871,7 @@ Object {
 }
 `
 
-exports[`tests/markup.test.js TAP MarkupProcess fragment > markup file index.html 1`] = `
+exports[`tests/markup.test.js TAP MarkupProcess fragment > markup file index.html.json 1`] = `
 {
   "contents": {
     "type": "root",
@@ -1708,13 +1708,13 @@ Object {
 }
 `
 
-exports[`tests/markup.test.js TAP MarkupProcess fragment > markup resource index.html 1`] = `
+exports[`tests/markup.test.js TAP MarkupProcess fragment > markup resource index.html.json 1`] = `
 Object {
-  "encodingFormat": "text/html",
+  "encodingFormat": "application/json",
   "rel": Array [
     "alternate",
   ],
-  "url": "index.html",
+  "url": "index.html.json",
 }
 `
 
