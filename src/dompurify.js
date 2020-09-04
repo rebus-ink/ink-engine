@@ -7,7 +7,7 @@ const purifyConfig = {
   KEEP_CONTENT: false,
   IN_PLACE: true,
   WHOLE_DOCUMENT: true,
-  ADD_TAGS: ["link"],
+  ADD_TAGS: ["link", "ink-page"],
   FORBID_TAGS: ["meta", "form"],
   FORBID_ATTR: ["srcset", "action", "background", "poster"]
 };
@@ -23,11 +23,13 @@ module.exports = async function purifyPreprocess(
   let dom;
   try {
     dom = new JSDOM(chapter, {
-      contentType
+      contentType,
+      url: "http://localhost"
     });
   } catch (err) {
     dom = new JSDOM(chapter, {
-      contentType: "text/html"
+      contentType: "text/html",
+      url: "http://localhost"
     });
   }
   const window = dom.window;

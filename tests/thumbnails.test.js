@@ -11,19 +11,14 @@ tap.cleanSnapshot = s => {
 
 const docxPath = path.join(__dirname, "fixtures/test.docx");
 
-tap.test("docx process", async test => {
+tap.test("thumbnails process", async test => {
   for await (const vfile of docx({
     filename: docxPath,
-    mediaType: "docx"
+    mediaType: "docx",
+    thumbnails: true
   })) {
-    if (!vfile.data) {
-      test.matchSnapshot(vfile, "docx first result");
-    } else {
-      test.matchSnapshot(vfile.contents, "docx file " + vfile.path);
-      test.matchSnapshot(
-        vfile.data.resource,
-        "docx resource " + vfile.data.resource.url
-      );
+    if (vfile.contentType && vfile.contentType.includes("image")) {
+      test.matchSnapshot(vfile, "thumbnails " + vfile.path);
     }
   }
 });

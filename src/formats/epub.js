@@ -1,7 +1,6 @@
 const fs = require("fs");
 const unzip = require("unzipper");
 const path = require("path");
-const os = require("os");
 const parseOPF = require("./opf.js");
 const purify = require("../dompurify");
 const util = require("util");
@@ -10,10 +9,7 @@ const processCSS = require("../postcss");
 const parseToC = require("./epub-nav");
 const toVfile = require("to-vfile");
 const vfile = require("vfile");
-const process = require("../unified");
-const crypto = require("crypto");
-const stream = require("stream");
-const pipeline = util.promisify(stream.pipeline);
+const processor = require("../unified/dom-processor");
 
 const JSTYPES = [
   "text/javascript",
@@ -34,180 +30,131 @@ const JSTYPES = [
   "application/ecmascript"
 ];
 
-module.exports = epub;
-
-/**
- *
- * @param {string} file
- * @param {(import("vfile").VFile) => Promise<string} extract
- */
-async function epub(
-  file,
-  extract,
-  { sanitize = true, cssPrefix = "#ink-engine" }
-) {
-  /**
-   * @type {Object.<string, string>}
-   */
-  const urls = {};
-  let container;
-  // let errorInStream
-  // function errorHandler (err) {
-  //   console.log('error in stream')
-  //   errorInStream = err
-  // }
-
-  await pipeline(
-    fs.createReadStream(file),
-    unzip.Parse().on("entry", async entry => {
-      if (entry.path === "META-INF/container.xml") {
-        const content = await entry.buffer();
-        container = content.toString();
-      } else {
-        entry.autodrain();
-      }
-    })
-  );
-  // find OPF file from container
-  const opfPath = container.match(/full-path="([^"]+)"/)[1];
-  // Read OPF file from zip
-  let book;
-  let toc;
-  await pipeline(
-    fs.createReadStream(file),
-    unzip.Parse().on("entry", async entry => {
-      if (entry.path === opfPath) {
-        const content = await entry.buffer();
-        book = parseOPF(content.toString(), opfPath);
-      } else {
-        entry.autodrain();
-      }
-    })
-  );
-  // convert to publication
-  // Use as reference when unzipping, deciding whether to sanitize or not.
-
-  const bookFile = vfile({
-    contents: JSON.stringify(book),
-    path: "index.json"
-  });
-  urls["index.json"] = await extract(
-    bookFile,
-    Object.assign({ url: "index.json" }, book),
-    {
-      contentType: "application/json"
-    }
-  );
-  let files = [];
-  const randomFileName = crypto.randomBytes(15).toString("hex");
+module.exports = async function*(options) {
+  // Currently we always sanitize markup and CSS and skip JS files. This may change in the future
+  const { cssPrefix = "#ink-engine", filename, tempRoot } = options;
   const tempDirectory = path.join(
-    os.tmpdir(),
-    randomFileName,
-    path.basename(file),
+    tempRoot,
+    path.basename(filename, ".epub"),
     "/"
   );
-  // await fs.promises.mkdir(tempDirectory, { recursive: true });
-  const extractor = unzip.Extract({ path: tempDirectory });
-  fs.createReadStream(file).pipe(extractor);
-  await extractor.promise();
-  if (sanitize) {
-    for (const resource of book.resources) {
-      if (resource.rel.includes("contents") || resource.rel.includes("ncx")) {
-        const file = await fs.promises.readFile(
-          path.join(tempDirectory, resource.url),
-          "utf8"
-        );
-        toc = parseToC(file, resource.url);
-        extract(
-          { contents: JSON.stringify(toc) },
-          Object.assign(toc, { url: "contents.json" }),
-          { contentType: "application/json" }
-        );
-      }
-      if (
-        resource.encodingFormat.includes("html") ||
-        resource.encodingFormat.includes("svg")
-      ) {
-        const file = await fs.promises.readFile(
-          path.join(tempDirectory, resource.url),
-          "utf8"
-        );
-        const clean = await purify(file, resource.url, resource.encodingFormat);
-        const cleanedFile = vfile({
-          contents: clean,
-          path: path.join(tempDirectory, resource.url)
-        });
-        urls[resource.url] = await extract(cleanedFile, resource, {
-          contentType: resource.encodingFormat
-        });
-        cleanedFile.data.resource = resource;
-        files = files.concat(cleanedFile);
-      } else if (resource.encodingFormat.includes("css")) {
-        const file = await fs.promises.readFile(
-          path.join(tempDirectory, resource.url),
-          "utf8"
-        );
-        const clean = await processCSS(file, resource.url, cssPrefix);
-        const cleanedFile = vfile({
-          contents: clean,
-          path: path.join(tempDirectory, resource.url)
-        });
-        urls[resource.url] = await extract(cleanedFile, resource, {
-          contentType: resource.encodingFormat
-        });
-        cleanedFile.data.resource = resource;
-        files = files.concat(cleanedFile);
-      } else if (!JSTYPES.includes(resource.encodingFormat)) {
-        const file = await toVfile.read(path.join(tempDirectory, resource.url));
-        urls[resource.url] = await extract(file, resource, {
-          contentType: resource.encodingFormat
-        });
-        file.data.resource = resource;
-        files = files.concat(file);
-      }
-    }
-  } else {
-    for (const resource of book.resources) {
-      if (resource.rel.includes("contents") || resource.rel.includes("ncx")) {
-        const file = await fs.promises.readFile(
-          path.join(tempDirectory, resource.url),
-          "utf8"
-        );
-        toc = parseToC(file, resource.url);
-        extract(
-          { contents: JSON.stringify(toc) },
-          Object.assign(toc, { url: "contents.json" }),
-          { contentType: "application/json" }
-        );
-      }
+  // First we extract all of the files because random access for zip files is hard to get right
+  await extractFiles(tempDirectory, filename);
+
+  // Next we get the OPF file and parse it because that file will guide all of our work below.
+  const opfPath = await getOPFPath(tempDirectory);
+  const opf = await getOPF(tempDirectory, opfPath);
+
+  // Now we need the book file itself, which is the primary entry point for clients
+  const book = parseOPF(opf.toString(), opfPath);
+  const resources = book.resources;
+  const bookFile = vfile({
+    contents: JSON.stringify(book),
+    contentType: "application/json",
+    path: "index.json",
+    data: { resource: Object.assign({ url: "index.json" }, book) }
+  });
+  yield bookFile;
+
+  // Now we need to extract and convert the primary navigation file
+  const toc = await getContents(tempDirectory, resources);
+  yield {
+    contents: JSON.stringify(toc),
+    contentType: "application/json",
+    path: "contents.json",
+    data: { resource: Object.assign(toc, { url: "contents.json" }) }
+  };
+
+  // Here we get to the meat of the processor: the actual book files
+  for (const resource of resources) {
+    if (
+      resource.encodingFormat.includes("html") ||
+      resource.encodingFormat.includes("svg")
+    ) {
+      const json = await processMarkup(tempDirectory, resource, toc, book);
+      yield json;
+    } else if (resource.encodingFormat.includes("css")) {
+      const cleanedFile = await processStylesheet(
+        tempDirectory,
+        resource,
+        cssPrefix
+      );
+      yield cleanedFile;
+    } else if (!JSTYPES.includes(resource.encodingFormat)) {
       const file = await toVfile.read(path.join(tempDirectory, resource.url));
-      urls[resource.url] = await extract(file, resource, {
-        contentType: resource.encodingFormat
-      });
       file.data.resource = resource;
-      files = files.concat(file);
+      file.path = resource.url;
+      yield file;
     }
   }
-  files = files
-    .map(file => {
-      file.data.book = book;
-      file.data.toc = toc;
-      return file;
-    })
-    .filter(file => file.data.resource.encodingFormat.includes("html"));
-  // call processor and extract generated json
-  const result = await process(
-    { files, cwd: tempDirectory, output: tempDirectory },
-    extract
+
+  // And we need to clean up after ourselves because if we don't, things get very cluttered very quickly.
+  // Also essential for many cloud function hosts as not cleaning up after the function can slow things down.
+  await rimraf(tempRoot);
+  // Doing this to pass the test after refactor
+  yield book;
+};
+
+function extractFiles(tempDirectory, filename) {
+  const extractor = unzip.Extract({ path: tempDirectory });
+  fs.createReadStream(filename).pipe(extractor);
+  return extractor.promise();
+}
+
+async function getOPFPath(tempDirectory) {
+  const meta = await getTextFile(tempDirectory, "META-INF/container.xml");
+  const opfPath = meta.match(/full-path="([^"]+)"/)[1];
+  return opfPath;
+}
+function getOPF(tempDirectory, opfPath) {
+  return getTextFile(tempDirectory, opfPath);
+}
+
+function getTextFile(tempDirectory, fileName) {
+  const file = path.join(tempDirectory, fileName);
+  return fs.promises.readFile(file, "utf8");
+}
+
+async function getContents(tempDirectory, resources) {
+  const contents = resources.find(
+    resource =>
+      resource.rel.includes("contents") || resource.rel.includes("ncx")
   );
-  book.resources = book.resources.map(updateURL);
-  if (result.wordcount) {
-    book.wordCount = result.wordcount;
-  }
-  await rimraf(tempDirectory);
-  return book;
-  function updateURL(resource) {
-    resource.url = urls[resource.url];
-    return resource;
-  }
+  const file = await getTextFile(tempDirectory, contents.url);
+  const toc = parseToC(file, contents.url);
+  return toc;
+}
+
+// This is the core processor for each chapter of the epub
+
+async function processMarkup(tempDirectory, resource, toc, book) {
+  const file = await getTextFile(tempDirectory, resource.url);
+  const clean = await purify(file, resource.url, resource.encodingFormat, true);
+  const result = await processor.process(clean);
+  resource = result.data.resource = Object.assign({}, resource, {
+    url: resource.url + ".json",
+    encodingFormat: "application/json"
+  });
+  const contents = {
+    contents: result.contents,
+    resource,
+    toc: toc,
+    book: book
+  };
+  result.contents = JSON.stringify(contents, null, 2);
+  result.path = resource.url;
+  result.contentType = "application/json";
+  return result;
+}
+
+async function processStylesheet(tempDirectory, resource, cssPrefix) {
+  const file = await getTextFile(tempDirectory, resource.url);
+  const clean = await processCSS(file, resource.url, cssPrefix);
+  const virtualFile = vfile({
+    contents: clean,
+    contentType: resource.encodingFormat,
+    path: resource.url
+  });
+  virtualFile.data.resource = resource;
+  return virtualFile;
 }
