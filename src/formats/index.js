@@ -10,6 +10,7 @@ const sharp = require("sharp");
 const THUMBSIZE = Number.parseInt(process.env.THUMBSIZE, 10);
 const THUMBPATH = process.env.THUMBPATH;
 const vfile = require("vfile");
+const rimraf = util.promisify(require("rimraf"));
 
 const PREFERSDATA = [pdf, markup];
 // const PREFERSPATH = [docx, epub]
@@ -75,6 +76,7 @@ async function* processor(options) {
       yield file;
     }
   }
+  await rimraf(options.tempRoot);
 }
 
 module.exports = processor;
