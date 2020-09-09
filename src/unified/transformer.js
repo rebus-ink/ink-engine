@@ -4,6 +4,7 @@ const visit = require("unist-util-visit");
 const is = require("hast-util-is-element");
 const has = require("hast-util-has-property");
 const info = require("property-information");
+const toText = require("hast-util-to-text");
 const location = info.find(info.html, "data-ink-location").property;
 const locations = [
   "div",
@@ -26,6 +27,7 @@ const locations = [
   "blockquote",
   "aside"
 ];
+const headings = ["h1", "h2", "h3", "h4", "h5"];
 
 function attacher(options) {
   return transformer;
@@ -51,7 +53,8 @@ function transform(node, file, { prefix = "#ink-engine" } = {}) {
   const data = Object.assign({}, node.data, {
     book: file.data.book,
     resource: file.data.resource,
-    toc: file.data.toc
+    toc: file.data.toc,
+    headings: []
   });
   node.data = data;
   let counter = 0;
@@ -59,6 +62,14 @@ function transform(node, file, { prefix = "#ink-engine" } = {}) {
     if (is(node, locations) && !has(node, location)) {
       node.properties[location] = counter;
       counter = counter + 1;
+    }
+    if (is(node, headings)) {
+      data.headings = data.headings.concat({
+        label: toText(node),
+        level: Number.parseInt(node.tagName.replace("h", ""), 10),
+        url: `#${node.properties.id}`,
+        children: []
+      });
     }
   });
   return node;

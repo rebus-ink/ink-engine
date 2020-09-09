@@ -5,6 +5,8 @@ const purify = require("../dompurify");
 require("./domstubs.js").setStubs(global);
 const pdfjsLib = require("pdfjs-dist/es5/build/pdf.js");
 const path = require("path");
+const THUMBSIZE = Number.parseInt(process.env.THUMBSIZE, 10);
+const THUMBPATH = process.env.THUMBPATH;
 
 // Some PDFs need external cmaps.
 const CMAP_URL = "../../node_modules/pdfjs-dist/cmaps/";
@@ -41,7 +43,7 @@ module.exports = async function*({ data, filename = "PDF.pdf" }) {
     contentType: "application/json",
     path: "index.json"
   });
-
+  // processmarkup should create a toc file that we then just yield
   const toc = getToC(name, numPages);
   yield vfile({
     contents: JSON.stringify(toc),
@@ -86,7 +88,7 @@ function getFileNameForPage(pageNum) {
   return `page${pageNum.padStart(4, "0")}.svg`;
 }
 
-async function getPageText(page, viewport, path) {
+async function getPageText(page, viewport, filepath) {
   const textContent = await page.getTextContent();
   const text = textContent.items.map(textItem => {
     // we have to take in account viewport transform, which includes scale,
@@ -96,18 +98,57 @@ async function getPageText(page, viewport, path) {
       [1, 0, 0, -1, 0, 0]
     );
     var style = textContent.styles[textItem.fontName];
-    return `<text transform="${"matrix(" + tx.join(" ") + ")"}" font-family="${
+    var fontHeight = Math.sqrt(tx[2] * tx[2] + tx[3] * tx[3]);
+    let width = textItem.width * 2;
+    if (style.vertical) {
+      width = textItem.height * 2;
+    }
+    var angle = Math.atan2(tx[1], tx[0]);
+    if (style.vertical) {
+      angle += Math.PI / 2;
+    }
+    var fontAscent = fontHeight;
+    if (style.ascent) {
+      fontAscent = style.ascent * fontAscent;
+    } else if (style.descent) {
+      fontAscent = (1 + style.descent) * fontAscent;
+    }
+    let left, top;
+    if (angle === 0) {
+      left = tx[4];
+      top = tx[5] - fontAscent;
+    } else {
+      left = tx[4] + fontAscent * Math.sin(angle);
+      top = tx[5] - fontAscent * Math.cos(angle);
+    }
+    let transform = "";
+    if (angle !== 0) {
+      transform = `transform="rotate(${angle}deg)"`;
+    }
+    return `<text direction="${
+      textItem.dir
+    }" x="${left}" ${transform} y="${top +
+      fontHeight}" textLength="${width}" font-family="${
       style.fontFamily
-    }" fill="transparent" font-size="0.95">${textItem.str}</text>`;
+    }" fill="transparent" lengthAdjust="spacingAndGlyphs" font-size="${fontHeight}px">${
+      textItem.str
+    }</text>`;
   });
   return `<ink-page data-pdf-page="${page.pageNumber}" id="page${
     page.pageNumber
-  }"><svg xmlns="http://www.w3.org/2000/svg" width="${
+  }"><h2 data-ink-page-header><img src="${path.join(
+    THUMBPATH,
+    filepath
+  )}.jpg" alt="" height="${THUMBSIZE / 2}"><span  data-ink-page-number>Page ${
+    page.pageNumber
+  }</span></h2><svg xmlns="http://www.w3.org/2000/svg" width="${
     viewport.width
   }px" height="${viewport.height}px" preserveAspectRatio="none" viewBox="0 0 ${
     viewport.width
   } ${viewport.height}" font-size="1">
-  <image href="${path}" height="${viewport.height}" width="${viewport.width}"/>
+  <image href="${filepath}" height="${viewport.height}" width="${
+    viewport.width
+  }"/>
   ${text.join("")}
   </svg></ink-page>
   `;
@@ -125,6 +166,7 @@ function wrap(body, title) {
     </style>
   </head>
   <body id="pdf-body">
+  <h1 data-ink-page-title>${title}</h1>
   ${body}
   </body>
   </html>
@@ -175,6 +217,9 @@ async function processMarkup(html, resource, book, toc) {
   // const result = vfile({ contents: clean });
   result.path = resource.url + ".json";
   result.contentType = "application/json";
+  result.data = Object.assign({}, result.data, {
+    headings: result.contents.data.headings
+  });
   const contents = {
     contents: result.contents,
     resource,

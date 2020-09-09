@@ -10,7 +10,7 @@ Buffer <89 50 4e 47 0d 0a 1a 0a 00 00 00 0d 49 48 44 52 00 00 02 40 00 00 01 80 
 `
 
 exports[`tests/docx.test.js TAP docx process > docx file contents.json 1`] = `
-{"heading":"test Contents","type":"Docx","children":[{"children":[],"label":"test","url":"index.html"}]}
+{"type":"Headings","heading":"Test File: Sub title to text file","children":[{"label":"Test File: Sub title to text file","level":1,"url":"#test-file-sub-title-to-text-file","children":[{"label":"Works Cited","level":2,"url":"#works-cited","children":[]}]}],"url":"contents.json"}
 `
 
 exports[`tests/docx.test.js TAP docx process > docx file index.html.json 1`] = `
@@ -758,7 +758,23 @@ exports[`tests/docx.test.js TAP docx process > docx file index.html.json 1`] = `
         ]
       }
     ],
-    "data": {}
+    "data": {
+      "headings": [
+        {
+          "label": "Test File: Sub title to text file",
+          "level": 1,
+          "url": "#test-file-sub-title-to-text-file",
+          "children": [
+            {
+              "label": "Works Cited",
+              "level": 2,
+              "url": "#works-cited",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
   },
   "resource": {
     "url": "index.html.json",
@@ -768,13 +784,21 @@ exports[`tests/docx.test.js TAP docx process > docx file index.html.json 1`] = `
     "encodingFormat": "application/json"
   },
   "toc": {
-    "heading": "test Contents",
-    "type": "Docx",
+    "type": "Headings",
+    "heading": "Test File: Sub title to text file",
     "children": [
       {
-        "children": [],
-        "label": "test",
-        "url": "index.html"
+        "label": "Test File: Sub title to text file",
+        "level": 1,
+        "url": "#test-file-sub-title-to-text-file",
+        "children": [
+          {
+            "label": "Works Cited",
+            "level": 2,
+            "url": "#works-cited",
+            "children": []
+          }
+        ]
       }
     ],
     "url": "contents.json"
@@ -849,13 +873,21 @@ exports[`tests/docx.test.js TAP docx process > docx resource contents.json 1`] =
 Object {
   "children": Array [
     Object {
-      "children": Array [],
-      "label": "test",
-      "url": "index.html",
+      "children": Array [
+        Object {
+          "children": Array [],
+          "label": "Works Cited",
+          "level": 2,
+          "url": "#works-cited",
+        },
+      ],
+      "label": "Test File: Sub title to text file",
+      "level": 1,
+      "url": "#test-file-sub-title-to-text-file",
     },
   ],
-  "heading": "test Contents",
-  "type": "Docx",
+  "heading": "Test File: Sub title to text file",
+  "type": "Headings",
   "url": "contents.json",
 }
 `

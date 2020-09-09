@@ -23,23 +23,6 @@ module.exports = async function*(options) {
       }
     ]
   };
-  const toc = {
-    heading: book.name + " Contents",
-    type: "Markup",
-    children: [
-      {
-        children: [],
-        label: book.name,
-        url: "index.html"
-      }
-    ]
-  };
-  yield vfile({
-    contents: JSON.stringify(toc),
-    contentType: "application/json",
-    path: "contents.json",
-    data: { resource: Object.assign(toc, { url: "contents.json" }) }
-  });
 
   let html;
   if (fragment) {
@@ -47,10 +30,16 @@ module.exports = async function*(options) {
   } else {
     html = data;
   }
-  const htmlFile = await processMarkup(html, book.resources[0], toc, book);
+  const htmlFile = await processMarkup(html, book.resources[0], book);
   htmlFile.contentType = "text/html";
   htmlFile.path = htmlFile.data.resource.url;
   yield htmlFile;
+  yield vfile({
+    contents: JSON.stringify(htmlFile.toc),
+    contentType: "application/json",
+    path: "contents.json",
+    data: { resource: Object.assign(htmlFile.toc, { url: "contents.json" }) }
+  });
 
   const bookFile = vfile({
     contents: JSON.stringify(book),
@@ -63,13 +52,22 @@ module.exports = async function*(options) {
   yield book;
 };
 
-async function processMarkup(html, resource, toc, book) {
+async function processMarkup(html, resource, book) {
   const clean = await purify(html, resource.url, resource.encodingFormat, true);
   const result = await processor.process(clean);
+  result.data = Object.assign({}, result.data, {
+    headings: result.contents.data.headings
+  });
   resource = result.data.resource = Object.assign({}, resource, {
     url: resource.url + ".json",
     encodingFormat: "application/json"
   });
+  const toc = {
+    type: "Headings",
+    heading: result.data.headings[0].label,
+    children: result.data.headings,
+    url: "contents.json"
+  };
   const contents = {
     contents: result.contents,
     resource,
@@ -79,6 +77,7 @@ async function processMarkup(html, resource, toc, book) {
   result.contents = JSON.stringify(contents, null, 2);
   result.path = resource.url;
   result.contentType = "application/json";
+  result.toc = toc;
   return result;
 }
 
