@@ -131,13 +131,16 @@ exports[`tests/pdf.test.js TAP pdf process > pdf file test-file.pdf contents 11`
                     "children": [
                       {
                         "type": "element",
-                        "tagName": "img",
+                        "tagName": "span",
                         "properties": {
-                          "height": 200,
-                          "alt": "",
-                          "src": "thumbnails/page0001.svg.jpg"
+                          "dataInkPageLabel": ""
                         },
-                        "children": []
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Page "
+                          }
+                        ]
                       },
                       {
                         "type": "element",
@@ -148,7 +151,7 @@ exports[`tests/pdf.test.js TAP pdf process > pdf file test-file.pdf contents 11`
                         "children": [
                           {
                             "type": "text",
-                            "value": "Page 1"
+                            "value": "1"
                           }
                         ]
                       }
@@ -636,13 +639,16 @@ exports[`tests/pdf.test.js TAP pdf process > pdf file test-file.pdf contents 11`
                     "children": [
                       {
                         "type": "element",
-                        "tagName": "img",
+                        "tagName": "span",
                         "properties": {
-                          "height": 200,
-                          "alt": "",
-                          "src": "thumbnails/page0002.svg.jpg"
+                          "dataInkPageLabel": ""
                         },
-                        "children": []
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Page "
+                          }
+                        ]
                       },
                       {
                         "type": "element",
@@ -653,7 +659,7 @@ exports[`tests/pdf.test.js TAP pdf process > pdf file test-file.pdf contents 11`
                         "children": [
                           {
                             "type": "text",
-                            "value": "Page 2"
+                            "value": "2"
                           }
                         ]
                       }
@@ -1201,13 +1207,16 @@ exports[`tests/pdf.test.js TAP pdf process > pdf file test-file.pdf contents 11`
                     "children": [
                       {
                         "type": "element",
-                        "tagName": "img",
+                        "tagName": "span",
                         "properties": {
-                          "height": 200,
-                          "alt": "",
-                          "src": "thumbnails/page0003.svg.jpg"
+                          "dataInkPageLabel": ""
                         },
-                        "children": []
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Page "
+                          }
+                        ]
                       },
                       {
                         "type": "element",
@@ -1218,7 +1227,7 @@ exports[`tests/pdf.test.js TAP pdf process > pdf file test-file.pdf contents 11`
                         "children": [
                           {
                             "type": "text",
-                            "value": "Page 3"
+                            "value": "3"
                           }
                         ]
                       }
@@ -1766,13 +1775,16 @@ exports[`tests/pdf.test.js TAP pdf process > pdf file test-file.pdf contents 11`
                     "children": [
                       {
                         "type": "element",
-                        "tagName": "img",
+                        "tagName": "span",
                         "properties": {
-                          "height": 200,
-                          "alt": "",
-                          "src": "thumbnails/page0004.svg.jpg"
+                          "dataInkPageLabel": ""
                         },
-                        "children": []
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Page "
+                          }
+                        ]
                       },
                       {
                         "type": "element",
@@ -1783,7 +1795,7 @@ exports[`tests/pdf.test.js TAP pdf process > pdf file test-file.pdf contents 11`
                         "children": [
                           {
                             "type": "text",
-                            "value": "Page 4"
+                            "value": "4"
                           }
                         ]
                       }
@@ -2331,13 +2343,16 @@ exports[`tests/pdf.test.js TAP pdf process > pdf file test-file.pdf contents 11`
                     "children": [
                       {
                         "type": "element",
-                        "tagName": "img",
+                        "tagName": "span",
                         "properties": {
-                          "height": 200,
-                          "alt": "",
-                          "src": "thumbnails/page0005.svg.jpg"
+                          "dataInkPageLabel": ""
                         },
-                        "children": []
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Page "
+                          }
+                        ]
                       },
                       {
                         "type": "element",
@@ -2348,7 +2363,7 @@ exports[`tests/pdf.test.js TAP pdf process > pdf file test-file.pdf contents 11`
                         "children": [
                           {
                             "type": "text",
-                            "value": "Page 5"
+                            "value": "5"
                           }
                         ]
                       }
@@ -2896,13 +2911,16 @@ exports[`tests/pdf.test.js TAP pdf process > pdf file test-file.pdf contents 11`
                     "children": [
                       {
                         "type": "element",
-                        "tagName": "img",
+                        "tagName": "span",
                         "properties": {
-                          "height": 200,
-                          "alt": "",
-                          "src": "thumbnails/page0006.svg.jpg"
+                          "dataInkPageLabel": ""
                         },
-                        "children": []
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Page "
+                          }
+                        ]
                       },
                       {
                         "type": "element",
@@ -2913,7 +2931,7 @@ exports[`tests/pdf.test.js TAP pdf process > pdf file test-file.pdf contents 11`
                         "children": [
                           {
                             "type": "text",
-                            "value": "Page 6"
+                            "value": "6"
                           }
                         ]
                       }
@@ -3461,13 +3479,16 @@ exports[`tests/pdf.test.js TAP pdf process > pdf file test-file.pdf contents 11`
                     "children": [
                       {
                         "type": "element",
-                        "tagName": "img",
+                        "tagName": "span",
                         "properties": {
-                          "height": 200,
-                          "alt": "",
-                          "src": "thumbnails/page0007.svg.jpg"
+                          "dataInkPageLabel": ""
                         },
-                        "children": []
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Page "
+                          }
+                        ]
                       },
                       {
                         "type": "element",
@@ -3478,7 +3499,7 @@ exports[`tests/pdf.test.js TAP pdf process > pdf file test-file.pdf contents 11`
                         "children": [
                           {
                             "type": "text",
-                            "value": "Page 7"
+                            "value": "7"
                           }
                         ]
                       }
@@ -4046,13 +4067,16 @@ exports[`tests/pdf.test.js TAP pdf process > pdf file test-file.pdf contents 11`
                     "children": [
                       {
                         "type": "element",
-                        "tagName": "img",
+                        "tagName": "span",
                         "properties": {
-                          "height": 200,
-                          "alt": "",
-                          "src": "thumbnails/page0008.svg.jpg"
+                          "dataInkPageLabel": ""
                         },
-                        "children": []
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Page "
+                          }
+                        ]
                       },
                       {
                         "type": "element",
@@ -4063,7 +4087,7 @@ exports[`tests/pdf.test.js TAP pdf process > pdf file test-file.pdf contents 11`
                         "children": [
                           {
                             "type": "text",
-                            "value": "Page 8"
+                            "value": "8"
                           }
                         ]
                       }
@@ -4185,49 +4209,49 @@ exports[`tests/pdf.test.js TAP pdf process > pdf file test-file.pdf contents 11`
         "children": [],
         "label": "Page 1",
         "image": "page0001.svg",
-        "url": "index.html#page1"
+        "url": "#page1"
       },
       {
         "children": [],
         "label": "Page 2",
         "image": "page0002.svg",
-        "url": "index.html#page2"
+        "url": "#page2"
       },
       {
         "children": [],
         "label": "Page 3",
         "image": "page0003.svg",
-        "url": "index.html#page3"
+        "url": "#page3"
       },
       {
         "children": [],
         "label": "Page 4",
         "image": "page0004.svg",
-        "url": "index.html#page4"
+        "url": "#page4"
       },
       {
         "children": [],
         "label": "Page 5",
         "image": "page0005.svg",
-        "url": "index.html#page5"
+        "url": "#page5"
       },
       {
         "children": [],
         "label": "Page 6",
         "image": "page0006.svg",
-        "url": "index.html#page6"
+        "url": "#page6"
       },
       {
         "children": [],
         "label": "Page 7",
         "image": "page0007.svg",
-        "url": "index.html#page7"
+        "url": "#page7"
       },
       {
         "children": [],
         "label": "Page 8",
         "image": "page0008.svg",
-        "url": "index.html#page8"
+        "url": "#page8"
       }
     ]
   },
@@ -4295,7 +4319,7 @@ exports[`tests/pdf.test.js TAP pdf process > pdf file test-file.pdf contents 11`
 `
 
 exports[`tests/pdf.test.js TAP pdf process > pdf file test-file.pdf contents 2`] = `
-{"heading":"This Is A Test PDF Contents","type":"PDF","children":[{"children":[],"label":"Page 1","image":"page0001.svg","url":"index.html#page1"},{"children":[],"label":"Page 2","image":"page0002.svg","url":"index.html#page2"},{"children":[],"label":"Page 3","image":"page0003.svg","url":"index.html#page3"},{"children":[],"label":"Page 4","image":"page0004.svg","url":"index.html#page4"},{"children":[],"label":"Page 5","image":"page0005.svg","url":"index.html#page5"},{"children":[],"label":"Page 6","image":"page0006.svg","url":"index.html#page6"},{"children":[],"label":"Page 7","image":"page0007.svg","url":"index.html#page7"},{"children":[],"label":"Page 8","image":"page0008.svg","url":"index.html#page8"}]}
+{"heading":"This Is A Test PDF Contents","type":"PDF","children":[{"children":[],"label":"Page 1","image":"page0001.svg","url":"#page1"},{"children":[],"label":"Page 2","image":"page0002.svg","url":"#page2"},{"children":[],"label":"Page 3","image":"page0003.svg","url":"#page3"},{"children":[],"label":"Page 4","image":"page0004.svg","url":"#page4"},{"children":[],"label":"Page 5","image":"page0005.svg","url":"#page5"},{"children":[],"label":"Page 6","image":"page0006.svg","url":"#page6"},{"children":[],"label":"Page 7","image":"page0007.svg","url":"#page7"},{"children":[],"label":"Page 8","image":"page0008.svg","url":"#page8"}]}
 `
 
 exports[`tests/pdf.test.js TAP pdf process > pdf file test-file.pdf contents 3`] = `

@@ -59,7 +59,7 @@ async function* processor(options) {
       file.contentType.includes("image") &&
       options.thumbnails
     ) {
-      const thumb = await sharp(file.contents)
+      const thumb = await sharp(Buffer.from(file.contents))
         .resize(THUMBSIZE, THUMBSIZE, { fit: "inside" })
         .jpeg({ quality: 60 })
         .toBuffer();

@@ -5,8 +5,6 @@ const purify = require("../dompurify");
 require("./domstubs.js").setStubs(global);
 const pdfjsLib = require("pdfjs-dist/es5/build/pdf.js");
 const path = require("path");
-const THUMBSIZE = Number.parseInt(process.env.THUMBSIZE, 10);
-const THUMBPATH = process.env.THUMBPATH;
 
 // Some PDFs need external cmaps.
 const CMAP_URL = "../../node_modules/pdfjs-dist/cmaps/";
@@ -136,10 +134,7 @@ async function getPageText(page, viewport, filepath) {
   });
   return `<ink-page data-pdf-page="${page.pageNumber}" id="page${
     page.pageNumber
-  }"><h2 data-ink-page-header><img src="${path.join(
-    THUMBPATH,
-    filepath
-  )}.jpg" alt="" height="${THUMBSIZE / 2}"><span  data-ink-page-number>Page ${
+  }"><h2 data-ink-page-header><span data-ink-page-label>Page </span><span data-ink-page-number>${
     page.pageNumber
   }</span></h2><svg xmlns="http://www.w3.org/2000/svg" width="${
     viewport.width
@@ -200,7 +195,7 @@ function getToC(name, pages) {
       children: [],
       label: `Page ${index + 1}`,
       image: getFileNameForPage(index + 1),
-      url: `index.html#page${index + 1}`
+      url: `#page${index + 1}`
     };
   }
   return {

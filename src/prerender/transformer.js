@@ -45,6 +45,10 @@ function transform(
       node.properties.src = rebase(node.properties.src, mediaBase);
       counter = counter + 1;
     }
+    if (has(node, "href") && is(node, ["image", "svg:image"])) {
+      node.properties.href = rebase(node.properties.href, mediaBase);
+      counter = counter + 1;
+    }
     if (has(node, "srcset")) {
       const parsed = srcset.parse(node.properties.srcset);
       parsed.forEach(src => {
