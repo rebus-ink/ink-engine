@@ -29,7 +29,7 @@ function transform(
       return `${absoluteURL.pathname}${absoluteURL.hash}`;
     }
   }
-  const data = Object.assign({}, node.data, {
+  const data = Object.assign({}, file.data, node.data, {
     stylesheets: [],
     title: ""
   });

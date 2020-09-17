@@ -1,13 +1,15 @@
 const getProcessor = require("./processor");
+const processAnnotations = require("./annotation-processor");
 
 module.exports = async function preRender(data, options) {
   const { annotations = [] } = options;
   const chapter = Object.assign({ annotations }, data);
   const processor = getProcessor(options);
-  const tree = await processor.run(data.contents);
+  const tree = await processor.run(data.contents, { data: {} });
   chapter.stylesheets = tree.data.stylesheets;
   chapter.contents = await processor.stringify(tree);
   chapter.navigation = getNavigation(chapter);
+  chapter.annotations = await processAnnotations(chapter.annotations);
   return chapter;
 };
 

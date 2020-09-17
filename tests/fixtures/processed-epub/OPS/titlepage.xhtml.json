@@ -94,7 +94,36 @@
                     "tagName": "img",
                     "properties": {
                       "alt": "title page",
-                      "src": "images/Moby-Dick_FE_title_page.jpg"
+                      "src": "images/Moby-Dick_FE_title_page.jpg",
+                      "srcset": "images/Moby-Dick_FE_title_page-hd.jpg 2x, images/Moby-Dick_FE_title_page-phone.jpg 100w, images/Moby-Dick_FE_title_page-phone-HD.jpg 100w 2x"
+                    },
+                    "children": []
+                  },
+                  {
+                    "type": "text",
+                    "value": "\r\n      "
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tagName": "svg",
+                "properties": {
+                  "dataEpubType": "frontmatter titlepage",
+                  "className": [
+                    "BookTitlePage-rw"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "\r\n         "
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "image",
+                    "properties": {
+                      "href": "images/Moby-Dick_FE_title_page.jpg"
                     },
                     "children": []
                   },
