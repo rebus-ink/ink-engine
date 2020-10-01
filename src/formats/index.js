@@ -17,6 +17,7 @@ const PREFERSDATA = [pdf, markup];
 // const PREFERSPATH = [docx, epub]
 
 async function* processor(options) {
+  const { thumbSize = THUMBSIZE, thumbPath = THUMBPATH } = options;
   let processor;
   let suffix;
   switch (options.mediaType) {
@@ -60,14 +61,14 @@ async function* processor(options) {
       options.thumbnails
     ) {
       const thumb = await sharp(Buffer.from(file.contents))
-        .resize(THUMBSIZE, THUMBSIZE, { fit: "inside" })
+        .resize(thumbSize, thumbSize, { fit: "inside" })
         .jpeg({ quality: 60 })
         .toBuffer();
-      const thumbPath = `${path.join(THUMBPATH, file.path)}.jpg`;
+      const tPath = `${path.join(thumbPath, file.path)}.jpg`;
       const thumbFile = vfile({
         contents: thumb,
         contentType: "image/jpeg",
-        path: thumbPath
+        path: tPath
       });
       yield file;
       yield thumbFile;
