@@ -82,6 +82,7 @@ module.exports = async function*(options) {
       yield cleanedFile;
     } else if (!JSTYPES.includes(resource.encodingFormat)) {
       const file = await toVfile.read(path.join(tempDirectory, resource.url));
+      file.contentType = resource.encodingFormat;
       file.data.resource = resource;
       file.path = resource.url;
       yield file;
