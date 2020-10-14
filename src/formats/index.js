@@ -6,10 +6,6 @@ const path = require("path");
 const os = require("os");
 const crypto = require("crypto");
 const fs = require("fs");
-const sharp = require("sharp");
-const THUMBSIZE = Number.parseInt(process.env.THUMBSIZE, 10);
-const THUMBPATH = process.env.THUMBPATH;
-const vfile = require("vfile");
 const util = require("util");
 const rimraf = util.promisify(require("rimraf"));
 
@@ -17,7 +13,6 @@ const PREFERSDATA = [pdf, markup];
 // const PREFERSPATH = [docx, epub]
 
 async function* processor(options) {
-  const { thumbSize = THUMBSIZE, thumbPath = THUMBPATH } = options;
   let processor;
   let suffix;
   switch (options.mediaType) {
@@ -55,26 +50,7 @@ async function* processor(options) {
     await fs.promises.writeFile(options.filename, data);
   }
   for await (const file of processor(options)) {
-    if (
-      file.contentType &&
-      file.contentType.includes("image") &&
-      options.thumbnails
-    ) {
-      const thumb = await sharp(Buffer.from(file.contents))
-        .resize(thumbSize, thumbSize, { fit: "inside" })
-        .jpeg({ quality: 60 })
-        .toBuffer();
-      const tPath = `${path.join(thumbPath, file.path)}.jpg`;
-      const thumbFile = vfile({
-        contents: thumb,
-        contentType: "image/jpeg",
-        path: tPath
-      });
-      yield file;
-      yield thumbFile;
-    } else {
-      yield file;
-    }
+    yield file;
   }
   await rimraf(options.tempRoot);
 }
