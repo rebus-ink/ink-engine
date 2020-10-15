@@ -14,7 +14,10 @@ tap.test("pdf process", async test => {
     filename: "test.pdf",
     mediaType: "pdf"
   })) {
-    test.matchSnapshot(vfile.contents, "pdf file test-file.pdf contents");
-    test.matchSnapshot(vfile.path, "pdf file test-file.pdf path");
+    test.matchSnapshot(
+      vfile.contents,
+      "pdf file test-file.pdf contents" + vfile.path
+    );
+    test.matchSnapshot(vfile.path, "pdf file test-file.pdf path" + vfile.path);
   }
 });

@@ -67,30 +67,6 @@ Markup is sanitized using [`dompurify`](https://github.com/cure53/DOMPurify). CS
 
 The engine also generates `hast` JSON files for all HTML and XHTML files. [`hast`](https://github.com/syntax-tree/hast) is an abstract syntax tree format used by the [`unified`](https://github.com/unifiedjs/unified) collection of processing tools. These JSON files let clients skip the HTML parsing stage when rendering the publications as a part of a website. They also come embedded with a version of the publication object, a ToC in object form (if available) under the `data.book` and `data.toc` properties respectively. And the `LinkedResource` object for the current file is available under `data.resource`.
 
-## Google Firebase Function
-
-The innards of a Storage-triggered Google Firebase function can be found at `ink-engine/functions/on-finalize`.
-
-```js
-const setup = require('ink-engine/functions/on-finalize');
-const admin = require('firebase-admin');
-admin.initializeApp();
-const storage = admin.storage();
-const onFinalize = setup(storage, (finished) => console.log(finished));
-```
-
-Currently it requires the path in the Google Storage bucket to be of the form `/users/:userId/publications/:publicationId/:filename`.
-
-* It extracts files to `/users/:userId/documents/:publicationId/:filename/:epub-document-path.suffix`
-* Generates image thumbnails at `/users/:userId/thumbnails/:publicationId/:filename/:epub-document-path.suffix`
-
-### `setup(storage, doneCallback)`
-
-* `storage`: should be an initialised Google Storage client module, either from `firebase-admin` or from `@google-cloud/storage`.
-* `doneCallback(error, {publication: [publication id], payload: [publication object], userId: [user id]})`
-
-The Cloud Function could also serve as a starting point for your own functions.
-
 ## TODO
 
 - [ ] Broader format support in general

@@ -5,6 +5,30 @@ const purify = require("../dompurify");
 require("./domstubs.js").setStubs(global);
 const pdfjsLib = require("pdfjs-dist/es5/build/pdf.js");
 const path = require("path");
+const Canvas = require("canvas");
+
+class NodeCanvasFactory {
+  create(width, height) {
+    const canvas = Canvas.createCanvas(width, height);
+    const context = canvas.getContext("2d");
+    return {
+      canvas,
+      context
+    };
+  }
+
+  reset(canvasAndContext, width, height) {
+    canvasAndContext.canvas.width = width;
+    canvasAndContext.canvas.height = height;
+  }
+
+  destroy(canvasAndContext) {
+    canvasAndContext.canvas.width = 0;
+    canvasAndContext.canvas.height = 0;
+    canvasAndContext.canvas = null;
+    canvasAndContext.context = null;
+  }
+}
 
 // Some PDFs need external cmaps.
 const CMAP_URL = "../../node_modules/pdfjs-dist/cmaps/";
@@ -25,65 +49,89 @@ module.exports = async function*({ data, filename = "PDF.pdf" }) {
   if (information.info.Title) {
     name = information.info.Title;
   }
-  const images = [];
-  for (let index = 0; index < numPages; index++) {
-    images[index] = {
-      url: getFileNameForPage(index + 1),
-      rel: [],
-      encodingFormat: "image/svg+xml"
-    };
-  }
-
-  const book = getBook(name, images);
-  book.numberOfPages = numPages;
-  yield vfile({
-    contents: JSON.stringify(book),
-    contentType: "application/json",
-    path: "index.json"
-  });
-  // processmarkup should create a toc file that we then just yield
-  const toc = getToC(name, numPages);
-  yield vfile({
-    contents: JSON.stringify(toc),
-    contentType: "application/json",
-    path: "contents.json"
-  });
+  let images = [];
 
   let pages = [];
   for (var i = 1; i <= numPages; i++) {
     const page = await doc.getPage(i);
     const viewport = page.getViewport({ scale: 2.0 });
     const filePath = getFileNameForPage(i);
-    yield await getPageBack(page, viewport, filePath);
-    pages = pages.concat(getPageText(page, viewport, filePath));
+    const file = await getPageBack(page, viewport, filePath);
+    images = images.concat({
+      url: file.path,
+      rel: [],
+      encodingFormat: file.contentType
+    });
+    yield file;
+    pages = pages.concat(getPageText(page, viewport, file.path));
   }
   const texts = await Promise.all(pages);
   // Turn this into a processed json file
+  const book = getBook(name, images);
+  book.numberOfPages = numPages;
+  // processmarkup should create a toc file that we then just yield
+  const toc = getToC(name, images);
+  yield vfile({
+    contents: JSON.stringify(toc),
+    contentType: "application/json",
+    path: "contents.json"
+  });
   const result = await processMarkup(
     wrap(texts.join("\n"), name),
     { url: "index.html", encodingFormat: "text/html" },
     book,
     toc
   );
+  yield vfile({
+    contents: JSON.stringify(book),
+    contentType: "application/json",
+    path: "index.json"
+  });
 
   yield result;
 };
 
 async function getPageBack(page, viewport, path) {
-  const opList = await page.getOperatorList();
-  var svgGfx = new pdfjsLib.SVGGraphics(page.commonObjs, page.objs);
-  svgGfx.embedFonts = true;
-  const svg = await svgGfx.getSVG(opList, viewport);
-  return vfile({
-    contents: svg.toString(),
-    contentType: "image/svg+xml",
-    path
-  });
+  try {
+    const opList = await page.getOperatorList();
+
+    var svgGfx = new pdfjsLib.SVGGraphics(page.commonObjs, page.objs);
+    svgGfx.embedFonts = true;
+    const svg = await svgGfx.getSVG(opList, viewport);
+    return vfile({
+      contents: svg.toString(),
+      contentType: "image/svg+xml",
+      path: path + ".svg"
+    });
+  } catch (err) {
+    console.error(err);
+    const canvasFactory = new NodeCanvasFactory();
+    const canvasAndContext = canvasFactory.create(
+      viewport.width,
+      viewport.height
+    );
+    console.log(viewport.width, viewport.height);
+    const renderContext = {
+      canvasContext: canvasAndContext.context,
+      viewport: viewport,
+      canvasFactory: canvasFactory
+    };
+    const renderTask = page.render(renderContext);
+    await renderTask.promise;
+    const image = canvasAndContext.canvas.toBuffer("image/jpeg", {
+      quality: 0.7
+    });
+    return vfile({
+      contents: image,
+      contentType: "image/jpeg",
+      path: path + ".jpeg"
+    });
+  }
 }
 
 function getFileNameForPage(pageNum) {
   pageNum = String(pageNum);
-  return `page${pageNum.padStart(4, "0")}.svg`;
+  return `page${pageNum.padStart(4, "0")}`;
 }
 
 async function getPageText(page, viewport, filepath) {
@@ -188,16 +236,15 @@ function getBook(name, images) {
   };
 }
 
-function getToC(name, pages) {
-  const children = [];
-  for (let index = 0; index < pages; index++) {
-    children[index] = {
+function getToC(name, images) {
+  const children = images.map((file, index) => {
+    return {
       children: [],
       label: `Page ${index + 1}`,
-      image: getFileNameForPage(index + 1),
+      image: file.url,
       url: `#page${index + 1}`
     };
-  }
+  });
   return {
     heading: name + " Contents",
     type: "PDF",
