@@ -64,6 +64,7 @@ module.exports = async function*({ data, filename = "PDF.pdf" }) {
     });
     yield file;
     pages = pages.concat(getPageText(page, viewport, file.path));
+    page.cleanup();
   }
   const texts = await Promise.all(pages);
   // Turn this into a processed json file
