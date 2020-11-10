@@ -4139,56 +4139,55 @@ exports[`tests/pdf.test.js TAP pdf process > pdf file test-file.pdf contentsinde
           "label": "This Is A Test PDF",
           "level": 1,
           "url": "#this-is-a-test-pdf",
-          "children": [
-            {
-              "label": "Page 1",
-              "level": 2,
-              "url": "#page-1",
-              "children": []
-            },
-            {
-              "label": "Page 2",
-              "level": 2,
-              "url": "#page-2",
-              "children": []
-            },
-            {
-              "label": "Page 3",
-              "level": 2,
-              "url": "#page-3",
-              "children": []
-            },
-            {
-              "label": "Page 4",
-              "level": 2,
-              "url": "#page-4",
-              "children": []
-            },
-            {
-              "label": "Page 5",
-              "level": 2,
-              "url": "#page-5",
-              "children": []
-            },
-            {
-              "label": "Page 6",
-              "level": 2,
-              "url": "#page-6",
-              "children": []
-            },
-            {
-              "label": "Page 7",
-              "level": 2,
-              "url": "#page-7",
-              "children": []
-            },
-            {
-              "label": "Page 8",
-              "level": 2,
-              "url": "#page-8",
-              "children": []
-            }
-          ]
+          "children": []
+        },
+        {
+          "label": "Page 1",
+          "level": 2,
+          "url": "#page-1",
+          "children": []
+        },
+        {
+          "label": "Page 2",
+          "level": 2,
+          "url": "#page-2",
+          "children": []
+        },
+        {
+          "label": "Page 3",
+          "level": 2,
+          "url": "#page-3",
+          "children": []
+        },
+        {
+          "label": "Page 4",
+          "level": 2,
+          "url": "#page-4",
+          "children": []
+        },
+        {
+          "label": "Page 5",
+          "level": 2,
+          "url": "#page-5",
+          "children": []
+        },
+        {
+          "label": "Page 6",
+          "level": 2,
+          "url": "#page-6",
+          "children": []
+        },
+        {
+          "label": "Page 7",
+          "level": 2,
+          "url": "#page-7",
+          "children": []
+        },
+        {
+          "label": "Page 8",
+          "level": 2,
+          "url": "#page-8",
+          "children": []
         }
       ]
     }
