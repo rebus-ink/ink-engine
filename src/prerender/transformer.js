@@ -49,6 +49,17 @@ function transform(
       node.properties.href = rebase(node.properties.href, mediaBase);
       counter = counter + 1;
     }
+    if (has(node, "transform")) {
+      if (
+        node.properties.transform.includes("rotate") &&
+        node.properties.transform.includes("deg")
+      ) {
+        node.properties.transform = node.properties.transform.replace(
+          "deg",
+          ""
+        );
+      }
+    }
     if (has(node, "srcset")) {
       const parsed = srcset.parse(node.properties.srcset);
       parsed.forEach(src => {

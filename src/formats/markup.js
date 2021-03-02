@@ -64,7 +64,9 @@ async function processMarkup(html, resource, book) {
   });
   const toc = {
     type: "Headings",
-    heading: result.data.headings[0] ? result.data.headings[0].label : "Contents",
+    heading: result.data.headings[0]
+      ? result.data.headings[0].label
+      : "Contents",
     children: result.data.headings,
     url: "contents.json"
   };

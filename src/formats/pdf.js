@@ -170,7 +170,7 @@ async function getPageText(page, viewport, filepath) {
     }
     let transform = "";
     if (angle !== 0) {
-      transform = `transform="rotate(${angle}deg)"`;
+      transform = `transform="rotate(${angle})"`;
     }
     return `<text direction="${
       textItem.dir
