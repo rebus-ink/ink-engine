@@ -538,14 +538,21 @@ exports[`tests/docx.test.js TAP docx process > docx file index.html.json 1`] = `
               },
               {
                 "type": "element",
-                "tagName": "p",
+                "tagName": "ol",
                 "properties": {
                   "dataInkLocation": 20
                 },
                 "children": [
                   {
-                    "type": "text",
-                    "value": "[This note text uses a style named Table Note. Table notes use a lowercase letter instead of Arabic numerals to differentiate them from the notes to body content.]"
+                    "type": "element",
+                    "tagName": "li",
+                    "properties": {},
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "[This note text uses a style named Table Note. Table notes use a lowercase letter instead of Arabic numerals to differentiate them from the notes to body content.]"
+                      }
+                    ]
                   }
                 ]
               },
