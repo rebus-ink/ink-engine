@@ -93,41 +93,62 @@ module.exports = async function*({ data, filename = "PDF.pdf" }) {
 };
 
 async function getPageBack(page, viewport, path) {
-  try {
-    const opList = await page.getOperatorList();
+  // try {
+  //   const opList = await page.getOperatorList();
 
-    var svgGfx = new pdfjsLib.SVGGraphics(page.commonObjs, page.objs);
-    svgGfx.embedFonts = true;
-    const svg = await svgGfx.getSVG(opList, viewport);
-    return vfile({
-      contents: svg.toString(),
-      contentType: "image/svg+xml",
-      path: path + ".svg"
-    });
-  } catch (err) {
-    console.error(err);
-    const canvasFactory = new NodeCanvasFactory();
-    const canvasAndContext = canvasFactory.create(
-      viewport.width,
-      viewport.height
-    );
-    console.log(viewport.width, viewport.height);
-    const renderContext = {
-      canvasContext: canvasAndContext.context,
-      viewport: viewport,
-      canvasFactory: canvasFactory
-    };
-    const renderTask = page.render(renderContext);
-    await renderTask.promise;
-    const image = canvasAndContext.canvas.toBuffer("image/jpeg", {
-      quality: 0.7
-    });
-    return vfile({
-      contents: image,
-      contentType: "image/jpeg",
-      path: path + ".jpeg"
-    });
-  }
+  //   var svgGfx = new pdfjsLib.SVGGraphics(page.commonObjs, page.objs);
+  //   svgGfx.embedFonts = true;
+  //   const svg = await svgGfx.getSVG(opList, viewport);
+  //   return vfile({
+  //     contents: svg.toString(),
+  //     contentType: "image/svg+xml",
+  //     path: path + ".svg"
+  //   });
+  // } catch (err) {
+  //   console.error(err);
+  //   const canvasFactory = new NodeCanvasFactory();
+  //   const canvasAndContext = canvasFactory.create(
+  //     viewport.width,
+  //     viewport.height
+  //   );
+  //   console.log(viewport.width, viewport.height);
+  //   const renderContext = {
+  //     canvasContext: canvasAndContext.context,
+  //     viewport: viewport,
+  //     canvasFactory: canvasFactory
+  //   };
+  //   const renderTask = page.render(renderContext);
+  //   await renderTask.promise;
+  //   const image = canvasAndContext.canvas.toBuffer("image/jpeg", {
+  //     quality: 0.7
+  //   });
+  //   return vfile({
+  //     contents: image,
+  //     contentType: "image/jpeg",
+  //     path: path + ".jpeg"
+  //   });
+  // }
+  const canvasFactory = new NodeCanvasFactory();
+  const canvasAndContext = canvasFactory.create(
+    viewport.width,
+    viewport.height
+  );
+  console.log(viewport.width, viewport.height);
+  const renderContext = {
+    canvasContext: canvasAndContext.context,
+    viewport: viewport,
+    canvasFactory: canvasFactory
+  };
+  const renderTask = page.render(renderContext);
+  await renderTask.promise;
+  const image = canvasAndContext.canvas.toBuffer("image/jpeg", {
+    quality: 0.7
+  });
+  return vfile({
+    contents: image,
+    contentType: "image/jpeg",
+    path: path + ".jpeg"
+  });
 }
 
 function getFileNameForPage(pageNum) {
