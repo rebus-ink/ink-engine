@@ -40,7 +40,7 @@
     "postcss-selector-parser": "^6.0.4",
     "postcss-value-parser": "^4.1.0",
     "property-information": "^5.6.0",
-    "rehype-annotate": "github:rebus-ink/rehype-annotate",
+    "rehype-annotate": "git://github.com/rebus-ink/rehype-annotate",
     "rehype-sanitize": "^4.0.0",
     "rehype-slug": "^2.0.3",
     "rehype-stringify": "^6.0.1",
