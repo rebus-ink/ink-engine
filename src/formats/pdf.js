@@ -3,7 +3,7 @@ const processor = require("../unified/dom-processor");
 const purify = require("../dompurify");
 // domstubs.js is an APACHE licensed file from Mozilla's SVG generation for PDF.js example.
 require("./domstubs.js").setStubs(global);
-const pdfjsLib = require("pdfjs-dist/build/pdf.js");
+const pdfjsLib = require("pdfjs-dist/es5/build/pdf.js");
 const path = require("path");
 const Canvas = require("canvas");
 
