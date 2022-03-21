@@ -34,7 +34,7 @@
     "mammoth": "^1.4.16",
     "mime": "^2.5.2",
     "nlcst-to-string": "^2.0.4",
-    "pdfjs-dist": "^2.6.347",
+    "pdfjs-dist": "^2.13.216",
     "postcss": "^7.0.35",
     "postcss-prefix-selector": "^1.8.0",
     "postcss-selector-parser": "^6.0.4",
